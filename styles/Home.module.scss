@@ -1,0 +1,25 @@
+@import "variables";
+
+.hero {
+  width: 100%;
+  background-color: $pri-lighter;
+  min-height: calc(100vh - $nav);
+  display: flex;
+  align-items: center;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 100rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.home_bottom_container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 2rem;
+  gap: 3rem;
+}

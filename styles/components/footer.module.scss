@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    .logo_container {
+        
+    }
+
+    .blogsC {
+        .blogC {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .quick_linksC {
+        .linksC {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

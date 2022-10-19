@@ -1,0 +1,46 @@
+@import "../mixins";
+
+.popularC {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    .categories {
+        @include btn-fill-pri(6px 8px, $tag);
+        border-radius: 3px;
+    }
+
+    &_title {
+        font: $h5;
+        margin: 8px 0;
+    }
+
+    &_info {
+        color: $black-3;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font: $tag;
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &_name {
+
+            }
+        }
+
+        .date {
+
+        }
+    }
+
+    &_desc {
+        color: $black-1;
+        margin-top: 8px;
+        font: $p;
+    }
+}

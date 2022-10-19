@@ -1,0 +1,56 @@
+@import "variables";
+
+@mixin for-size($size) {
+    @if $size == phone-only {
+      @media (max-width: 599px) { @content; }
+    } @else if $size == tablet-portrait-up {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tablet-landscape-up {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == desktop-up {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == big-desktop-up {
+      @media (min-width: 1800px) { @content; }
+    }
+}
+
+@mixin btn-fill-pri($padding, $fontSize) {
+    background-color: $pri;
+    border-radius: 5px;
+    color: $white;
+    font: $fontSize;
+    padding: $padding;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+@mixin btn-fill-sec($padding) {
+    background-color: $white;
+    border-radius: 5px;
+    color: $pri;
+    font: $p;
+    padding: $padding;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin btn-stroke-pri($padding) {
+    background-color: transparent;
+    color: $pri;
+    font: $p;
+    padding: $padding;
+    border: 1px solid $pri;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@mixin btn-stroke-sec($padding) {
+    background-color: transparent;
+    color: $black-2;
+    font: $p;
+    padding: $padding;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    cursor: pointer;
+}

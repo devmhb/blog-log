@@ -1,0 +1,14 @@
+.about_authorC {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    .about_author_info {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        a {
+            color: rgb(61, 61, 194);
+        }
+    }
+}

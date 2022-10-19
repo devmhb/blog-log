@@ -1,0 +1,18 @@
+@import "../mixins";
+
+.top_authorC_container {
+    h5 {
+        margin-bottom: 1rem;
+        span {
+            @include btn-fill-pri(3px 5px, 1.7rem);
+            border-radius: 3px;
+        }
+    }
+
+    .top_authorC {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
