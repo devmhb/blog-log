@@ -1,0 +1,16 @@
+.category_container{
+
+    .category {
+        background-color: #E8F3F3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        margin: 1rem;
+        padding: 1rem;
+        width: 15rem;
+        height: 10rem;
+        border-radius: 5px;
+    }
+}

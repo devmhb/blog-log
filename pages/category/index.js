@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 import Layout from '../../components/layout'
+import Categories from "../../components/Categories.jsx"
+
 
 const Category = () => {
   return (
@@ -11,7 +13,7 @@ const Category = () => {
         </Head>
 
         <Layout>
-            <h1>Category</h1>
+            <Categories/>
         </Layout>
     </>
   )
