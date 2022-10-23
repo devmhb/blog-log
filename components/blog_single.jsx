@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import styles from "../styles/components/blog.module.scss"
 
-import FeatureCard from "../components/featureCard"
+import FeatureCard from "./featureCard"
 
 import blogImg from "../images/blog_single img.png"
 
-const Blog = () => {
+const BlogSingle = () => {
   return (
     <div className={styles.blog_container}>
         <p className={styles.category_name}>Travel</p>
@@ -33,4 +33,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default BlogSingle

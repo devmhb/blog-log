@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import AboutUs from '../../components/AboutUs'
 
-const index = () => {
+const About = () => {
   return (
     <>
         <Head>
@@ -19,4 +19,4 @@ const index = () => {
   )
 }
 
-export default index
+export default About
