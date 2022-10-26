@@ -3,7 +3,8 @@ import React from 'react'
 import Layout from '../../components/layout'
 import AboutUs from "../../components/AboutUs"
 
-const Author = () => {
+const Author = (props) => {
+  console.log(props);
   return (
     <>
         <Head>
@@ -20,3 +21,12 @@ const Author = () => {
 }
 
 export default Author
+
+export async function getStaticProps({params}) {
+  
+  return {
+    props: {
+      name: "Habib",
+    }
+  }
+}

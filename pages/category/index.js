@@ -2,9 +2,10 @@ import Head from 'next/head'
 import React from 'react'
 import Layout from '../../components/layout'
 import Categories from "../../components/Categories.jsx"
+import { getCategories } from '../../service'
 
 
-const Category = () => {
+const Category = ({categories}) => {
   return (
     <>
         <Head>
@@ -13,10 +14,18 @@ const Category = () => {
         </Head>
 
         <Layout>
-            <Categories/>
+            <Categories categories={categories}/>
         </Layout>
     </>
   )
 }
 
 export default Category
+
+export async function getStaticProps() {
+  const categories = await getCategories()
+  return {
+    props: {categories}
+  }
+}
+

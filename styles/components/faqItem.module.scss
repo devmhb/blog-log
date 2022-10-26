@@ -1,0 +1,26 @@
+@import "../mixins";
+@import "../variables";
+
+.faq_con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    .faq_items {
+        padding-top: 1rem;
+        .faq_item {
+
+            display: flex;
+            background-color: #DFF1F0;
+            padding: 1rem 1rem;
+            cursor: pointer;
+           h3{
+            width: 100%;
+           }
+       }
+    
+       P{
+       }
+    }
+}

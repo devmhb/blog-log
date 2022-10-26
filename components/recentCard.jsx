@@ -19,7 +19,7 @@ const RecentCard = () => {
             <h2 className={styles.recentC_title}>Design is the Mix of emotions</h2>
             <div className={styles.recentC_info}>
                 <div className={styles.author}>
-                    <Image src="" width ="20" height="20" alt='author'/>
+                    {/* <Image src="" width ="20" height="20" alt='author'/> */}
                     <p className={styles.author_name}>Jhony </p>
                 </div>
                 <p className={styles.date}>02 December 2022</p>

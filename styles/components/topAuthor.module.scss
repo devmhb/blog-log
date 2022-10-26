@@ -1,7 +1,10 @@
 .top_author_card {
         display: flex;
         gap: .5rem;
-
+        
+        .author {
+                width: 100%;
+        }
 
         .top_author_info {
                 display: flex;

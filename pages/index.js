@@ -1,14 +1,17 @@
 import Head from 'next/head'
 import styles from "../styles/Home.module.scss";
-
 import FeatureCards from '../components/featureCards'
 import PopularCards from '../components/popularCards'
 import Layout from '../components/layout';
 import RecentCards from '../components/recentCards';
 import TopAuthorCards from '../components/topAuthorCards';
 import HomeCategories from "../components/homeCategories"
+import { getPosts } from '../service';
+import Link from 'next/link';
 
-export default function Home() {
+export default function Home({posts}) {
+  const postsInfo = posts.edges;
+  console.log(postsInfo);
   return (
     <>
       <Head>
@@ -25,13 +28,33 @@ export default function Home() {
           </div>
 
          <div className={styles.home_bottom_container}>
+            <div className={styles.recent}>
             <RecentCards/>
-            <div className="home_bottom_right">
+            </div>
+            <div className={styles.home_bottom_right}>
               <TopAuthorCards/>
               <HomeCategories/>
             </div>
          </div>
+         {
+          postsInfo.map(post => (
+            <li key={post.node.title}>
+              <Link href={`/blog/${post.node.slug}`}>
+                {post.node.title}
+              </Link>
+            </li>
+          ))
+         }
       </Layout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  
+  const posts = await getPosts();
+
+  return {
+    props: {posts}
+  }
 }

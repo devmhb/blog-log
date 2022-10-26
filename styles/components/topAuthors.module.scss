@@ -1,6 +1,7 @@
 @import "../mixins";
 
 .top_authorC_container {
+    position: sticky;
     h5 {
         margin-bottom: 1rem;
         span {

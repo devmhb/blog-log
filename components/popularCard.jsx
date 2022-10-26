@@ -11,7 +11,7 @@ const PopularCard = () => {
         <h2 className={styles.popularC_title}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, possimus.</h2>
         <div className={styles.popularC_info}>
             <div className={styles.author}>
-                <Image src="" width ="20" height="20" alt='author'/>
+                {/* <Image src="" width ="20" height="20" alt='author'/> */}
                 <p className={styles.author_name}>Jhony </p>
             </div>
             <p className={styles.date}>02 December 2022</p>

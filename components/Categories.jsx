@@ -1,17 +1,17 @@
 import React from 'react'
 import Category from "./category"
 import styles from "../styles/components/categories.module.scss"
+import Link from 'next/link'
 
-const Categories = () => {
+const Categories = ({categories}) => {
+  console.log(categories);
   return (
     <div className={styles.categories_con}>
-        <Category/>
-        <Category/>
-        <Category/>
-        <Category/>
-        <Category/>
-        <Category/>
-        <Category/>
+        {
+          categories.edges.map((category, i) => (
+            <Category category={category} key={i}/>
+          ))
+        }
     </div>
   )
 }

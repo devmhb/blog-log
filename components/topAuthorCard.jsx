@@ -9,7 +9,7 @@ import styles from "../styles/components/topAuthor.module.scss"
 const TopAuthorCard = () => {
   return (
     <div className={styles.top_author_card}>
-        <Image src={dummyImg} width='' height='' alt="author" />
+        <Image className={styles.author} src={dummyImg} width='' height='' alt="author" />
         <div className={styles.top_author_info}>
             <h3 className={styles.top_author_title}>Jenny kia</h3>
             <p className={styles.top_author_desc}>Lorem ipsum dolor sit amet consectetur adipisicing.</p>

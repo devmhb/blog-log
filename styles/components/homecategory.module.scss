@@ -2,6 +2,12 @@
 
     .categories {
         display: flex;
-        gap: 5rem;
+
+        .category_name {
+            flex: 2;
+        }
+        .category_qty {
+
+        }
     }
 }
