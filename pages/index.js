@@ -10,7 +10,6 @@ import { getPosts } from "../service";
 import Link from "next/link";
 
 export default function Home({ posts }) {
-  const postsInfo = posts.edges;
   return (
     <>
       <Head>
@@ -21,25 +20,20 @@ export default function Home({ posts }) {
       <Layout>
         <div className={styles.hero}>
           <div className={styles.wrapper}>
-            <FeatureCards />
+            <FeatureCards posts={posts} />
             <PopularCards />
           </div>
         </div>
 
         <div className={styles.home_bottom_container}>
           <div className={styles.recent}>
-            <RecentCards />
+            <RecentCards posts={posts} />
           </div>
           <div className={styles.home_bottom_right}>
             <TopAuthorCards />
             <HomeCategories />
           </div>
         </div>
-        {postsInfo.map((post) => (
-          <li key={post.node.title}>
-            <Link href={`/blog/${post.node.slug}`}>{post.node.title}</Link>
-          </li>
-        ))}
       </Layout>
     </>
   );

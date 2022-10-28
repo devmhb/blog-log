@@ -16,6 +16,9 @@ export const getPosts = async () => {
               name
               createdAt
             }
+            categories {
+              name
+            }
             stage
           }
         }
@@ -137,6 +140,8 @@ export const getAuthor = async (slug) => {
                 url
               }
               title
+              facebook
+              instagram
             }
           }
         }
