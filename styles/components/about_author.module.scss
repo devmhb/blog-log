@@ -1,14 +1,27 @@
-.about_authorC {
+.about_authorsC {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .about_authorC {
     display: flex;
+    flex: 0 400px;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
+
+    .about_img {
+      width: 100px;
+      height: 100px;
+    }
 
     .about_author_info {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        a {
-            color: rgb(61, 61, 194);
-        }
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      a {
+        color: rgb(61, 61, 194);
+      }
     }
+  }
 }
