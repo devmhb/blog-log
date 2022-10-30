@@ -18,13 +18,13 @@ const Blog = ({ post }) => {
 
       <Layout>
         <div className={styles.blog_container}>
-          {/* <div className={styles.blog}>
-           <BlogSingle/>
+          <div className={styles.blog}>
+            <BlogSingle />
           </div>
           <div className={styles.authors_categories}>
-              <TopAuthor/>
-              <Categories/>
-          </div> */}
+            <TopAuthor />
+            <Categories />
+          </div>
           <h1>{postDetails.node.title}</h1>
         </div>
       </Layout>
