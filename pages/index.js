@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import RecentCards from "../components/recentCards";
 import TopAuthorCards from "../components/topAuthorCards";
 import HomeCategories from "../components/homeCategories";
-import { getPosts } from "../service";
+import { getAuthors, getPosts } from "../service";
 import Link from "next/link";
 
 export default function Home({ posts }) {

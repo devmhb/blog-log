@@ -47,6 +47,12 @@ export const getPostDetails = async (slug) => {
               name
               id
             }
+            content {
+              text
+            }
+            categories {
+              name
+            }
           }
         }
       }
@@ -140,8 +146,6 @@ export const getAuthor = async (slug) => {
                 url
               }
               title
-              facebook
-              instagram
             }
           }
         }

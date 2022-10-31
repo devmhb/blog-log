@@ -17,8 +17,9 @@ const AuthorDetails = ({ author }) => {
 
         <div>
           {authorInfo.node.posts.map((post) => (
-            // <li key={post.title}>{post.title}</li>
-            <AuthorPostCard post={post} author={authorInfo.node.name} />
+            <>
+              <AuthorPostCard post={post} author={authorInfo.node.name} />
+            </>
           ))}
         </div>
       </Layout>

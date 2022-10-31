@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 
 const featureCard = ({ posts }) => {
   const postInfo = posts.edges;
-  console.log(postInfo);
 
   const filteredPosts = postInfo.filter((post) => post.node.featuredPost);
 

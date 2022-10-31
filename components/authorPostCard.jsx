@@ -4,6 +4,7 @@ import styles from "../styles/components/featurecard.module.scss";
 import Image from "next/image";
 
 const AuthorPostCard = ({ post, author }) => {
+  console.log(post);
   return (
     <div className={styles.feature}>
       <p className={styles.categories}>Travel</p>
