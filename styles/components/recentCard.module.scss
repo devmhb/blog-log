@@ -2,43 +2,43 @@
 @import "../mixins";
 
 .recentC {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
 
-    &_left {
+  &_left {
+    flex: 2;
+  }
 
+  &_right {
+    flex: 2;
+    .categories {
+      @include btn-fill-pri(6px 8px, $tag);
+      border-radius: 3px;
     }
 
-    &_right {
-
-        .categories { 
-            @include btn-fill-pri(6px 8px, $tag);
-            border-radius: 3px;
-        }
-
-        .recentC_title {
-            font: $h1;
-        }
-
-        .recentC_info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: $black-3;
-            font: $tag;
-
-            .author {
-                display: flex;
-                align-items: center;
-                gap: .5rem;
-            }
-        }
-
-        .recentC_desc {
-            font: $p;
-            color: $black-1;
-            margin-top: 7px;
-        }
-
+    .recentC_title {
+      font: $h1;
     }
+
+    .recentC_info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: $black-3;
+      font: $tag;
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
+    .recentC_desc {
+      font: $p;
+      color: $black-1;
+      margin-top: 7px;
+    }
+  }
 }

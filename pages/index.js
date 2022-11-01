@@ -9,7 +9,7 @@ import HomeCategories from "../components/homeCategories";
 import { getAuthors, getPosts } from "../service";
 import Link from "next/link";
 
-export default function Home({ posts }) {
+export default function Home({ posts, authors }) {
   return (
     <>
       <Head>
@@ -30,7 +30,7 @@ export default function Home({ posts }) {
             <RecentCards posts={posts} />
           </div>
           <div className={styles.home_bottom_right}>
-            <TopAuthorCards />
+            <TopAuthorCards authors={authors} />
             <HomeCategories />
           </div>
         </div>
@@ -41,8 +41,9 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getPosts();
+  const authors = await getAuthors();
 
   return {
-    props: { posts },
+    props: { posts, authors },
   };
 }

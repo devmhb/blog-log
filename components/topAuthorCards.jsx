@@ -4,25 +4,20 @@ import styles from "../styles/components/topAuthors.module.scss";
 import { getAuthors } from "../service";
 
 const TopAuthorCards = ({ authors }) => {
-  console.log(authors);
+  const AuthorsInfo = authors.edges;
+  // console.log(AuthorsInfo);
   return (
     <div className={styles.top_authorC_container}>
       <h5>
         <span>Top</span>Authors
       </h5>
       <div className={styles.top_authorC}>
-        <TopAuthorCard />
+        {AuthorsInfo.map((author) => (
+          <TopAuthorCard author={author} />
+        ))}
       </div>
     </div>
   );
 };
 
 export default TopAuthorCards;
-
-export async function getStaticProps() {
-  const authors = await getAuthors();
-  console.log(authors);
-  return {
-    props: { authors },
-  };
-}

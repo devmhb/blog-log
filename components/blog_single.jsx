@@ -15,7 +15,6 @@ const BlogSingle = ({ postDetails }) => {
     }, [postDate]);
   };
 
-  console.log(postDetails);
   return (
     <div className={styles.blog_container}>
       <p className={styles.category_name}>
