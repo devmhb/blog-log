@@ -6,10 +6,11 @@ import Layout from "../components/layout";
 import RecentCards from "../components/recentCards";
 import TopAuthorCards from "../components/topAuthorCards";
 import HomeCategories from "../components/homeCategories";
-import { getAuthors, getPosts } from "../service";
+import { getAuthors, getCategories, getPosts } from "../service";
 import Link from "next/link";
 
-export default function Home({ posts, authors }) {
+export default function Home({ posts, authors, categories }) {
+  console.log(categories);
   return (
     <>
       <Head>
@@ -31,7 +32,7 @@ export default function Home({ posts, authors }) {
           </div>
           <div className={styles.home_bottom_right}>
             <TopAuthorCards authors={authors} />
-            <HomeCategories />
+            <HomeCategories categories={categories} />
           </div>
         </div>
       </Layout>
@@ -42,8 +43,9 @@ export default function Home({ posts, authors }) {
 export async function getStaticProps() {
   const posts = await getPosts();
   const authors = await getAuthors();
+  const categories = await getCategories();
 
   return {
-    props: { posts, authors },
+    props: { posts, authors, categories },
   };
 }

@@ -2,9 +2,9 @@ import Head from "next/head";
 import React from "react";
 import AuthorPostCard from "../../components/authorPostCard";
 import Layout from "../../components/layout";
-import { getAuthor, getAuthors } from "../../service";
+import { getAuthor, getAuthors, getCategories } from "../../service";
 
-const AuthorDetails = ({ author }) => {
+const AuthorDetails = ({ author, categories }) => {
   const authorInfo = author.edges[0];
   return (
     <>
@@ -40,8 +40,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const author = await getAuthor(params.slug);
+  const categories = await getCategories();
 
   return {
-    props: { author },
+    props: { author, categories },
   };
 }

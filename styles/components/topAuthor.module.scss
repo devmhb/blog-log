@@ -1,16 +1,15 @@
 .top_author_card {
-        display: flex;
-        gap: .5rem;
-        
-        .author {
-                width: 100%;
-        }
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  .author {
+    width: 100%;
+  }
 
-        .top_author_info {
-                display: flex;
-                flex-direction: column;
-                gap: .5rem;
-                justify-content: center;
-        }
+  .top_author_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+  }
 }
-

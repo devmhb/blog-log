@@ -1,15 +1,18 @@
-import React from 'react'
-import styles from "../styles/components/homecategory.module.scss"
+import React from "react";
+import styles from "../styles/components/homecategory.module.scss";
+import Link from "next/link";
 
-const HomeCategory = () => {
+const HomeCategory = ({ category }) => {
+  // console.log(category);
   return (
-        <div className={styles.categories_wrapper}>
-            <div className={styles.categories}>
-                <p className={styles.category_name}>Lifestyle</p>
-                <p className={styles.category_qty}>9</p>
-            </div>
-    </div>
-  )
-}
+    <Link href={`/category/${category.node.slug}`}>
+      <div className={styles.categories_wrapper}>
+        <div className={styles.categories}>
+          <p className={styles.category_name}>{category.node.name}</p>
+        </div>
+      </div>
+    </Link>
+  );
+};
 
-export default HomeCategory
+export default HomeCategory;

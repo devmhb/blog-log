@@ -1,13 +1,9 @@
 .categories_wrapper {
+  .categories {
+    display: flex;
 
-    .categories {
-        display: flex;
-
-        .category_name {
-            flex: 2;
-        }
-        .category_qty {
-
-        }
+    .category_name {
+      cursor: pointer;
     }
+  }
 }

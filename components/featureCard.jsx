@@ -20,9 +20,9 @@ const featureCard = ({ posts }) => {
 
   return (
     <>
-      {filteredPosts.map((post) => (
+      {filteredPosts.map((post, i) => (
         <Link href={`/blog/${post.node.slug}`}>
-          <div className={styles.feature} key={post.node.slug}>
+          <div className={styles.feature} key={i}>
             <p className={styles.categories}>
               {post?.node?.categories[0]?.name}
             </p>

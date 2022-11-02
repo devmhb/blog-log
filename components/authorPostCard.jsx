@@ -6,7 +6,7 @@ import Image from "next/image";
 const AuthorPostCard = ({ post, author }) => {
   return (
     <div className={styles.feature}>
-      <p className={styles.categories}>Travel</p>
+      {/* <p className={styles.categories}>Travel</p> */}
       <div className={styles.feature_img}>
         <Image src={DummyImg} alt="img" width="" height="" />
       </div>
