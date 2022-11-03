@@ -21,7 +21,7 @@ const RecentCard = ({ posts }) => {
         <Link href={`/blog/${post.node.slug}`}>
           <div className={styles.recentC} key={i}>
             <div className={styles.recentC_left}>
-              <Image src={DummyImg} alt="img" width="" height="" />
+              <Image src={DummyImg} alt="img" layout="responsive" />
             </div>
 
             <div className={styles.recentC_right}>

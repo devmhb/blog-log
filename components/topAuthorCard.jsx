@@ -11,12 +11,14 @@ const TopAuthorCard = ({ author }) => {
   return (
     <Link href={`/author/${author.node.slug}`}>
       <div className={styles.top_author_card} key={author}>
-        <Image
-          className={styles.author}
-          src={dummyImg}
-          width="100%"
-          alt="author"
-        />
+        <div className={styles.top_author_card_img}>
+          <Image
+            className={styles.author}
+            src={dummyImg}
+            alt="author"
+            layout="responsive"
+          />
+        </div>
         <div className={styles.top_author_info}>
           <h3 className={styles.top_author_title}>{author.node.name}</h3>
           <p className={styles.top_author_desc}>{author.node.bio}</p>

@@ -4,14 +4,19 @@
 .recentC {
   display: flex;
   gap: 2rem;
-  margin-top: 2rem;
 
   &_left {
-    flex: 2;
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      overflow: hidden;
+    }
   }
 
   &_right {
-    flex: 2;
+    flex: 1;
     .categories {
       @include btn-fill-pri(6px 8px, $tag);
       border-radius: 3px;

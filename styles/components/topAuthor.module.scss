@@ -2,6 +2,17 @@
   display: flex;
   gap: 0.5rem;
   cursor: pointer;
+
+  &_img {
+    flex: 0 80px;
+    height: 80px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+  }
+
   .author {
     width: 100%;
   }
@@ -11,5 +22,6 @@
     flex-direction: column;
     gap: 0.5rem;
     justify-content: center;
+    flex: 1;
   }
 }

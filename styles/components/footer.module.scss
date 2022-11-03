@@ -1,21 +1,29 @@
+@import "../mixins";
+@import "../variables";
+
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    .logo_container {
-        
+  display: flex;
+  justify-content: space-evenly;
+  .logo_container {
+    text-align: center;
+    .logo {
+      @include btn-fill-pri(6px 8px, $tag);
     }
+    .desc {
+    }
+  }
 
-    .blogsC {
-        .blogC {
-            display: flex;
-            flex-direction: column;
-        }
+  .blogsC {
+    .blogC {
+      display: flex;
+      flex-direction: column;
     }
+  }
 
-    .quick_linksC {
-        .linksC {
-            display: flex;
-            flex-direction: column;
-        }
+  .quick_linksC {
+    .linksC {
+      display: flex;
+      flex-direction: column;
     }
+  }
 }
