@@ -1,0 +1,16 @@
+.author_details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .author_img {
+    width: 50rem;
+    img {
+      width: 50rem;
+    }
+  }
+
+  .author_infos {
+  }
+}
