@@ -116,8 +116,6 @@ export const getAuthors = async () => {
             posts {
               title
             }
-            subheading
-            subio
           }
         }
       }

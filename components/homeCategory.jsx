@@ -3,7 +3,6 @@ import styles from "../styles/components/homecategory.module.scss";
 import Link from "next/link";
 
 const HomeCategory = ({ category }) => {
-  // console.log(category);
   return (
     <Link href={`/category/${category.node.slug}`}>
       <div className={styles.categories_wrapper}>

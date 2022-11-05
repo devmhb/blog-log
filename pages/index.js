@@ -10,7 +10,6 @@ import { getAuthors, getCategories, getPosts } from "../service";
 import Link from "next/link";
 
 export default function Home({ posts, authors, categories }) {
-  console.log(categories);
   return (
     <>
       <Head>
