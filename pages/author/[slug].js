@@ -8,11 +8,11 @@ import Layout from "../../components/layout";
 import { getAuthor, getAuthors, getCategories } from "../../service";
 
 const AuthorDetails = ({ author }) => {
-  const authorInfo = author.edges[0];
+  const authorInfo = author?.edges[0];
   return (
     <>
       <Head>
-        <title>{authorInfo.node.name}</title>
+        <title>{authorInfo?.node?.name}</title>
       </Head>
 
       <Layout>
@@ -23,19 +23,19 @@ const AuthorDetails = ({ author }) => {
                 src={Author}
                 height="100%"
                 width="100%"
-                alt={authorInfo.node.name}
+                alt={authorInfo?.node?.name}
               />
             </div>
             <div className={styles.author_infos}>
-              <h1>Hi! I am {authorInfo.node.name}</h1>
-              <p className={styles.authorsbio}>{authorInfo.node.bio}</p>
+              <h1>Hi! I am {authorInfo?.node?.name}</h1>
+              <p className={styles.authorsbio}>{authorInfo?.node?.bio}</p>
             </div>
           </div>
 
           <div className={styles.author_postsC}>
-            {authorInfo.node.posts.map((post) => (
+            {authorInfo?.node?.posts?.map((post) => (
               <div className={styles.author_posts}>
-                <AuthorPostCard post={post} author={authorInfo.node.name} />
+                <AuthorPostCard post={post} author={authorInfo?.node?.name} />
               </div>
             ))}
           </div>

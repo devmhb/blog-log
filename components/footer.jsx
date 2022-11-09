@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../styles/components/footer.module.scss";
+import Link from "next/link";
 
-const Footer = () => {
+const Footer = ({ categories }) => {
+  const categoriesInfo = categories?.edges;
   return (
     <footer className={styles.footer}>
       <div className={styles.logo_container}>
@@ -13,19 +15,26 @@ const Footer = () => {
 
       <div className={styles.blogsC}>
         <h5>Blogs</h5>
-        <div className={styles.blogC}>
-          <a href="">Travel</a>
+        {categoriesInfo?.map((category, index) => (
+          <div className={styles.blogC} key={category?.node?.name}>
+            <Link href={`/category/${category?.node?.slug}`}>
+              <a>{category?.node?.name}</a>
+            </Link>
+            {/* <a href="">Travel</a>
           <a href="">Technology</a>
           <a href="">Lifestyle</a>
           <a href="">Business</a>
-          <a href="">Fashion</a>
-        </div>
+          <a href="">Fashion</a> */}
+          </div>
+        ))}
       </div>
 
       <div className={styles.quick_linksC}>
         <h5>Quick links</h5>
         <div className={styles.linksC}>
-          <a href="">FAQ</a>
+          <Link href="/FAQ">
+            <a>FAQ</a>
+          </Link>
           <a href="">Terms & conditions</a>
           <a href="">Support</a>
           <a href="">Privacy policy</a>
@@ -35,8 +44,12 @@ const Footer = () => {
       <div className={styles.newsletter}>
         <h5>Subscribe for Newsletter</h5>
         <div className={styles.input_container}>
-          <input type="text" placeholder="Your Email" />
-          <input type="button" value="Subscribe" />
+          <input
+            className={styles.email_input}
+            type="text"
+            placeholder="Your Email"
+          />
+          <input className={styles.btn} type="button" value="Subscribe" />
         </div>
         <div className={styles.social_links}>
           <h5>Follow On:</h5>

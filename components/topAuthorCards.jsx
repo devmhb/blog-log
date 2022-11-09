@@ -3,7 +3,6 @@ import TopAuthorCard from "./topAuthorCard";
 import styles from "../styles/components/topAuthors.module.scss";
 
 const TopAuthorCards = ({ authors }) => {
-  console.log(authors);
   const AuthorsInfo = authors?.edges;
   return (
     <div className={styles.top_authorC_container}>

@@ -8,7 +8,7 @@ import Categories from "../../components/homeCategories";
 import { getPostDetails, getPosts } from "../../service";
 
 const Blog = ({ post }) => {
-  const postDetails = post.edges[0];
+  const postDetails = post?.edges[0];
   return (
     <>
       <Head>

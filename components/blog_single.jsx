@@ -20,15 +20,17 @@ const BlogSingle = ({ postDetails }) => {
       <p className={styles.category_name}>
         {postDetails?.node?.categories[0]?.name}
       </p>
-      <h1 className={styles.blog_title}>{postDetails.node.title}</h1>
+      <h1 className={styles.blog_title}>{postDetails?.node?.title}</h1>
       <div className={styles.blogC_info}>
         <div className={styles.author}>
           {/* <Image src="" width ="20" height="20" alt='author'/> */}
-          <p className={styles.author_name}>{postDetails.node.author.name} </p>
+          <p className={styles.author_name}>
+            {postDetails?.node?.author?.name}{" "}
+          </p>
         </div>
         <p
           className={styles.date}
-          onLoad={handleDate(postDetails.node.createdAt)}
+          onLoad={handleDate(postDetails?.node?.createdAt)}
         >
           {postDate}
         </p>
@@ -36,7 +38,7 @@ const BlogSingle = ({ postDetails }) => {
       <div className={styles.blog_imgC}>
         <Image src={blogImg} width="" height="" alt="author" />
       </div>
-      <p className={styles.blog_desc}>{postDetails.node.content.text}</p>
+      <p className={styles.blog_desc}>{postDetails?.node?.content?.text}</p>
       <h3 className={styles.sub_title}>
         I Created a Developer Rap Video - Heres What I Learned
       </h3>

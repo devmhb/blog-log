@@ -5,7 +5,6 @@ import Categories from "../../components/Categories.jsx";
 import { getCategories } from "../../service";
 
 const Category = ({ categories }) => {
-  console.log(categories);
   return (
     <>
       <Head>

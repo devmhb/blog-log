@@ -4,8 +4,10 @@
 .footer {
   display: flex;
   justify-content: space-evenly;
+  flex-flow: row wrap;
+  padding: 3rem 5rem;
   .logo_container {
-    text-align: center;
+    width: 20%;
     .logo {
       @include btn-fill-pri(6px 8px, $tag);
     }
@@ -25,5 +27,36 @@
       display: flex;
       flex-direction: column;
     }
+  }
+
+  .newsletter {
+    .input_container {
+      text-align: start;
+      margin: 1rem 0 1rem 0;
+      .email_input {
+        color: $black-3;
+        border: none;
+        outline: none;
+        padding: 1rem 3rem;
+        background-color: rgb(242, 248, 247);
+        display: inline-block;
+      }
+
+      .btn {
+        @include btn-fill-pri(1rem 3rem, $tag);
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+  h5,
+  h3 {
+    font: $h5;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $black-3;
+    margin-top: 0.3rem;
+    cursor: pointer;
   }
 }
