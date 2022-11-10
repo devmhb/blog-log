@@ -6,8 +6,7 @@ import Layout from "../../components/layout";
 const CategoryDetails = ({ category, posts }) => {
   const { edges: categoryInfo } = category;
   const { edges: postInfo } = posts;
-  console.log(category);
-  console.log(postInfo);
+  console.log(categoryInfo);
 
   return (
     <>
@@ -17,7 +16,11 @@ const CategoryDetails = ({ category, posts }) => {
       </Head>
 
       <Layout>
-        <div>{categoryInfo[0].node.name}</div>
+        {categoryInfo.map((category) => (
+          <div>
+            <h1>{category.node.name}</h1>
+          </div>
+        ))}
       </Layout>
     </>
   );
