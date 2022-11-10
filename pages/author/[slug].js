@@ -52,6 +52,7 @@ export async function getStaticPaths() {
 
   return {
     paths: authors.map(({ node: { slug } }) => ({ params: { slug } })),
+    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
   };
 }

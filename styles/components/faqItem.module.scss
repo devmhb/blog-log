@@ -2,25 +2,24 @@
 @import "../variables";
 
 .faq_con {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    .faq_items {
-        padding-top: 1rem;
-        .faq_item {
-            
-            display: flex;
-            background-color: #DFF1F0;
-            padding: 1rem 1rem;
-            cursor: pointer;
-           h3{
-            width: 100%;
-           }
-       }
-    
-       P{
-       }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .faq_items {
+    padding-top: 1rem;
+    .faq_item {
+      width: 80vw;
+      background-color: #dff1f0;
+      padding: 1rem 1rem;
+      cursor: pointer;
+      h3 {
+        display: block;
+      }
     }
+
+    P {
+      margin-top: 1.5rem;
+    }
+  }
 }

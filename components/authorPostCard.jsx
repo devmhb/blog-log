@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AuthorPostCard = ({ post, author }) => {
-  console.log(post);
+  // console.log(post);
   return (
     // <Link href={`author/blog/${post.node.slug}`}>
     <div className={styles.feature}>

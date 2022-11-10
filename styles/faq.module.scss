@@ -1,28 +1,28 @@
 @import "./mixins";
 
 .faq_container {
-    padding: 3rem 2rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .faq_header {
+    padding-bottom: 2rem;
+    text-align: center;
+    h1 {
+      margin-bottom: 1rem;
+      span {
+        @include btn-fill-pri(6px 8px, $h1);
+      }
+    }
+  }
+
+  .faq_items {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    .faq_header {
-        padding-bottom: 2rem;
-        text-align: center;
-        h1 {
-            margin-bottom: 1rem;
-            span {
-                @include btn-fill-pri(6px 8px, $h1)
-            }
-        }
-    }
-
-    .faq_items {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  }
 }

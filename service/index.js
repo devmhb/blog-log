@@ -72,6 +72,13 @@ export const getCategories = async () => {
             name
             slug
             createdAt
+            posts {
+              title
+              excerpt
+              photo {
+                url
+              }
+            }
           }
         }
       }
