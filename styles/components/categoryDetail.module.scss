@@ -1,0 +1,11 @@
+.category {
+  .category_name {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .posts_container {
+    padding: 4rem;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

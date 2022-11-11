@@ -9,6 +9,7 @@ import { getAuthor, getAuthors, getCategories } from "../../service";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
+  console.log(authorInfo);
   return (
     <>
       <Head>
@@ -52,7 +53,6 @@ export async function getStaticPaths() {
 
   return {
     paths: authors.map(({ node: { slug } }) => ({ params: { slug } })),
-    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
   };
 }

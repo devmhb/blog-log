@@ -72,13 +72,6 @@ export const getCategories = async () => {
             name
             slug
             createdAt
-            posts {
-              title
-              excerpt
-              photo {
-                url
-              }
-            }
           }
         }
       }
@@ -89,6 +82,11 @@ export const getCategories = async () => {
 };
 
 export const getCategory = async (slug) => {
+  // ei khane apne post nah anle koi theke paben bal
+  // apne toh just category r nam r slug r id nichen post gula nen taile sen paiben bal
+  // ami eikhaneo ansilam
+  // akhon anen abr dekhi
+  // r buijha ainen mane oije payground oi khane check kore niyen
   const query = gql`
     query MyQuery($slug: String!) {
       categoriesConnection(where: { slug: $slug }) {
@@ -98,6 +96,13 @@ export const getCategory = async (slug) => {
             id
             slug
             createdAt
+            posts {
+              title
+              excerpt
+              photo {
+                url
+              }
+            }
           }
         }
       }

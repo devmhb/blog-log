@@ -1,12 +1,12 @@
 import React from "react";
-import { getCategories, getCategory, getPosts } from "../../service";
+import { getCategories, getCategory } from "../../service";
 import styles from "../../styles/components/categoryDetail.module.scss";
 import Head from "next/head";
 import Layout from "../../components/layout";
+import CategoryPost from "../../components/CategoryPost";
 
 const CategoryDetails = ({ category }) => {
   const { edges: categoryInfo } = category;
-  // const { edges: postInfo } = posts;
   console.log(categoryInfo);
 
   return (
@@ -18,8 +18,16 @@ const CategoryDetails = ({ category }) => {
 
       <Layout>
         {categoryInfo.map((category) => (
-          <div className={styles.category_name}>
-            <h1>{category.node.name}</h1>
+          <div className={styles.category} key={category.node.id}>
+            <div className={styles.category_name}>
+              <h1>{category.node.name}</h1>
+            </div>
+
+            <div className={styles.posts_container}>
+              {category?.node?.posts?.map((post, i) => (
+                <CategoryPost post={post} />
+              ))}
+            </div>
           </div>
         ))}
       </Layout>
@@ -31,17 +39,14 @@ export default CategoryDetails;
 
 export async function getStaticPaths() {
   const { edges: category } = await getCategories();
-  // const { edges: posts } = await getPosts();
   return {
     paths: category.map(({ node: { slug } }) => ({ params: { slug } })),
-    // paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
   };
 }
 
 export async function getStaticProps({ params }) {
   const category = await getCategory(params.slug);
-  // const posts = await getPosts(params.slug);
 
   return {
     props: { category },
