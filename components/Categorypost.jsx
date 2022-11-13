@@ -9,7 +9,6 @@ const CategoryPost = ({ post }) => {
       <div className={styles.image_wrapper}>
         <Image src={DummyImg} width="" height="" alt="post_Img" />
       </div>
-
       <div>
         <h1>{post.title}</h1>
         <p>{post.excerpt}</p>
