@@ -1,0 +1,57 @@
+@import "../variables";
+.nav_container {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  height: $nav;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  background-color: #00aaa1;
+}
+
+.nav_container ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.nav_container h1 {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_container ul {
+    display: none;
+  }
+  .nav_container ul li {
+    top: 3rem;
+    left: 3rem;
+  }
+
+  .nav_container .burger div {
+    width: 1.5rem;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 5px;
+  }
+  .nav_container .burger div::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 1.5rem;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+  }
+  .nav_container .burger div::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 1.5rem;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+  }
+}

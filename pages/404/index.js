@@ -9,9 +9,9 @@ const index = () => {
       <div className={styles.error_container}>
         <div className={styles.error_items}>
           <h1>404</h1>
-          <p>The page you are looking for does not exist!</p>
+          <p>The Page You Are Looking For Does Not Exist!</p>
           <Link href="/">
-            <a>← Back to Home</a>
+            <a>← Back to Homepage</a>
           </Link>
         </div>
       </div>
