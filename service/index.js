@@ -87,6 +87,7 @@ export const getCategory = async (slug) => {
   // ami eikhaneo ansilam
   // akhon anen abr dekhi
   // r buijha ainen mane oije payground oi khane check kore niyen
+  // ho eigula check korei anchilam
   const query = gql`
     query MyQuery($slug: String!) {
       categoriesConnection(where: { slug: $slug }) {
@@ -102,6 +103,7 @@ export const getCategory = async (slug) => {
               photo {
                 url
               }
+              slug
             }
           }
         }

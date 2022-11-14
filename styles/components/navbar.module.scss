@@ -21,12 +21,21 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nav_container ul {
+  .nav_container {
+    position: relative;
+  }
+  .nav_container > .navitems {
     display: none;
   }
-  .nav_container ul li {
-    top: 3rem;
-    left: 3rem;
+
+  .nav_container > .burger_items {
+    position: absolute;
+    top: 100%;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    background-color: #00aaa1;
+    z-index: 99;
   }
 
   .nav_container .burger div {

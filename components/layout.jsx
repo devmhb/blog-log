@@ -1,14 +1,16 @@
 import React from "react";
 import Footer from "./Footer";
 import Navbar from "./navbar";
-import styles from "../styles/components/layout.module.scss";
+import { CategoriesProvider } from "./categoriesContext";
 
-const Layout = ({ children, categories }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
-      {children}
-      <Footer categories={categories} />
+      <CategoriesProvider>
+        <Navbar />
+        {children}
+        <Footer />
+      </CategoriesProvider>
     </>
   );
 };
