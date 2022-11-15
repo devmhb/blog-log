@@ -2,13 +2,15 @@ import Link from "next/link";
 import styles from "../styles/components/navbar.module.scss";
 import { useState } from "react";
 const Navbar = () => {
-  //   const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const [burger, setBurger] = useState(false);
 
   const handleNavbar = () => {
     setBurger(!burger);
   };
-
+  const handleDropdown = () => {
+    setDropdown(!dropdown);
+  };
   return (
     <nav className={styles.nav_container}>
       <ul className={styles.navitems}>
@@ -21,6 +23,21 @@ const Navbar = () => {
         <li className={styles.navitem}>
           <Link href="/category">Category</Link>
         </li>
+        <div className={styles.dropdown}>
+          <li onClick={handleDropdown}>
+            Pages <span>↓</span>
+          </li>
+          {dropdown && (
+            <div className={styles.dropdown_items}>
+              <li>
+                <Link href="/contactus">ContactUs</Link>
+              </li>
+              <li>
+                <Link href="/faq">Faq</Link>
+              </li>
+            </div>
+          )}
+        </div>
       </ul>
 
       {burger && (
@@ -34,6 +51,21 @@ const Navbar = () => {
           <li>
             <Link href="/category">Category</Link>
           </li>
+          <div className={styles.dropdown}>
+            <li onClick={handleDropdown}>
+              Pages <span>↓</span>
+            </li>
+            {dropdown && (
+              <div className={styles.dropdown_items}>
+                <li>
+                  <Link href="/contactus">ContactUs</Link>
+                </li>
+                <li>
+                  <Link href="/faq">Faq</Link>
+                </li>
+              </div>
+            )}
+          </div>
         </ul>
       )}
 
