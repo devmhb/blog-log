@@ -24,12 +24,23 @@
       .name_email {
         display: flex;
         gap: 3rem;
+        @media screen and (max-width: 768px) {
+          gap: 1rem;
+          flex-direction: column;
+        }
       }
       input,
       textarea {
         padding: 0.5rem;
         border: 1px solid #00aaa1;
         outline: none;
+      }
+      .btn_container {
+        text-align: right;
+        .btn {
+          @include btn-fill-pri(10px 15px, $tag);
+          width: 7rem;
+        }
       }
     }
     .contactus_desc {

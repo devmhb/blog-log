@@ -6,8 +6,12 @@
   justify-content: space-evenly;
   flex-flow: row wrap;
   padding: 3rem 5rem;
+  gap: 1.3rem;
   .logo_container {
     flex-basis: 20%;
+    @media screen and (max-width: 768px) {
+      flex-basis: 100%;
+    }
     .logo {
       @include btn-fill-pri(6px 8px, $tag);
     }
@@ -16,6 +20,9 @@
   }
 
   .blogsC {
+    @media screen and (max-width: 768px) {
+      flex: 1;
+    }
     .blogC {
       display: flex;
       flex-direction: column;
@@ -23,6 +30,9 @@
   }
 
   .quick_linksC {
+    @media screen and (max-width: 768px) {
+      flex: 1;
+    }
     .linksC {
       display: flex;
       flex-direction: column;
@@ -30,9 +40,16 @@
   }
 
   .newsletter {
+    @media screen and (max-width: 768px) {
+      flex: 1;
+      text-align: center;
+    }
     .input_container {
       text-align: start;
       margin: 1rem 0 1rem 0;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
       .email_input {
         color: $black-3;
         border: none;

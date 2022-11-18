@@ -23,7 +23,9 @@ const ContactUs = () => {
               rows="10"
               placeholder="Type Your message"
             />
-            <button className={styles.btn}></button>
+            <div className={styles.btn_container}>
+              <button className={styles.btn}>Send Message</button>
+            </div>
           </form>
           <div className={styles.contactus_desc}>
             <p className={styles.excerpt}>
