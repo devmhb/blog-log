@@ -5,7 +5,7 @@ import Image from "next/image";
 import Author from "../../images/author.jpg";
 import styles from "../../styles/components/authorDetails.module.scss";
 import Layout from "../../components/layout";
-import { getAuthor, getAuthors, getCategories } from "../../service";
+import { getAuthor, getAuthors } from "../../service";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
@@ -34,8 +34,8 @@ const AuthorDetails = ({ author }) => {
           </div>
 
           <div className={styles.author_postsC}>
-            {authorInfo?.node?.posts?.map((post) => (
-              <div className={styles.author_posts}>
+            {authorInfo?.node?.posts?.map((post, i) => (
+              <div key={i} className={styles.author_posts}>
                 <AuthorPostCard post={post} author={authorInfo?.node?.name} />
               </div>
             ))}

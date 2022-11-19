@@ -18,7 +18,7 @@ const RecentCard = ({ posts }) => {
   return (
     <>
       {postInfo.map((post, i) => (
-        <Link href={`/blog/${post.node.slug}`}>
+        <Link href={`/blog/${post.node.slug}`} key={i}>
           <div className={styles.recentC} key={i}>
             <div className={styles.recentC_left}>
               <Image src={DummyImg} alt="img" layout="responsive" />
