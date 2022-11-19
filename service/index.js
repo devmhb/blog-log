@@ -129,6 +129,7 @@ export const getAuthors = async () => {
             }
             posts {
               title
+              slug
             }
           }
         }
@@ -160,6 +161,7 @@ export const getAuthor = async (slug) => {
                 url
               }
               title
+              slug
             }
           }
         }

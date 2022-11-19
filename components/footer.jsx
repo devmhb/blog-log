@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/components/footer.module.scss";
 import Link from "next/link";
 import { CategoriesContext } from "./categoriesContext";
