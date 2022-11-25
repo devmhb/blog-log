@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 import styles from "../../styles/components/errorpage.module.scss";
 
-const index = () => {
+const NotFound = () => {
   return (
     <Layout>
       <div className={styles.error_container}>
@@ -19,4 +19,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NotFound;

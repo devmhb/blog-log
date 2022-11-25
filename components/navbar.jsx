@@ -30,7 +30,7 @@ const Navbar = () => {
           {dropdown && (
             <div className={styles.dropdown_items}>
               <li>
-                <Link href="/contactus">ContactUs</Link>
+                <Link href="/contact">ContactUs</Link>
               </li>
               <li>
                 <Link href="/faq">FAQ</Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             {dropdown && (
               <div className={styles.dropdown_items}>
                 <li>
-                  <Link href="/contactus">ContactUs</Link>
+                  <Link href="/contact">ContactUs</Link>
                 </li>
                 <li>
                   <Link href="/faq">FAQ</Link>

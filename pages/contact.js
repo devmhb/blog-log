@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/components/ContactUs.module.scss";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <Layout>
       <div className={styles.contactus_container}>
@@ -44,4 +44,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;

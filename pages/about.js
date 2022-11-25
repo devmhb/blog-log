@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Layout from "../../components/Layout";
-import AboutUs from "../../components/AboutUs";
-import { getAuthors } from "../../service";
-import AboutAuthor from "../../components/about_Author";
+import Layout from "../components/Layout";
+import AboutUs from "../components/AboutUs";
+import { getAuthors } from "../service";
+import AboutAuthor from "../components/about_Author";
 
 const About = ({ authors }) => {
   return (
