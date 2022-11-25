@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "../components/Layout";
-import styles from "../../styles/components/errorpage.module.scss";
+import styles from "../styles/components/errorpage.module.scss";
 
 const NotFound = () => {
   return (
