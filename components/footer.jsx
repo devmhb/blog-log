@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styles from "../styles/components/footer.module.scss";
 import Link from "next/link";
 import { CategoriesContext } from "./categoriesContext";
@@ -45,9 +45,8 @@ const Footer = () => {
             className={styles.email_input}
             type="text"
             placeholder="Your Email"
-            
           />
-          <input  className={styles.btn} type="button" value="Subscribe" />
+          <input className={styles.btn} type="button" value="Subscribe" />
         </div>
         <div className={styles.social_links}>
           <h5>Follow On:</h5>

@@ -8,7 +8,6 @@ import TopAuthorCards from "../components/topAuthorCards";
 import HomeCategories from "../components/homeCategories";
 import { getAuthors, getCategories, getPosts } from "../service";
 // import Context from "../components/Context";
-import Link from "next/link";
 
 export default function Home({ posts, authors, categories }) {
   return (

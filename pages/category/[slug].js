@@ -2,12 +2,12 @@ import React from "react";
 import { getCategories, getCategory } from "../../service";
 import styles from "../../styles/components/categoryDetail.module.scss";
 import Head from "next/head";
-import Layout from "../../components/layout";
-import CategoryPost from "../../components/CategoryPost";
+import Layout from "../../components/Layout";
+import CategoryPost from "../../components/Categorypost";
 
 const CategoryDetails = ({ category }) => {
   const { edges: categoryInfo } = category;
-  console.log(categoryInfo);
+  // console.log(categoryInfo);
 
   return (
     <>
