@@ -14,10 +14,8 @@ const About = ({ authors }) => {
         <meta name="keywords" content="blog" />
       </Head>
 
-      <Layout>
-        <AboutUs />
-        <AboutAuthor authors={authors} />
-      </Layout>
+      <AboutUs />
+      <AboutAuthor authors={authors} />
     </>
   );
 };

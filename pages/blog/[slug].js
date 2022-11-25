@@ -16,17 +16,15 @@ const Blog = ({ post }) => {
         <meta name="blog" content="blog page" />
       </Head>
 
-      <Layout>
-        <div className={styles.blog_container}>
-          <div className={styles.blog}>
-            <BlogSingle postDetails={postDetails} />
-          </div>
-          <div className={styles.authors_categories}>
-            <TopAuthor />
-            <Categories />
-          </div>
+      <div className={styles.blog_container}>
+        <div className={styles.blog}>
+          <BlogSingle postDetails={postDetails} />
         </div>
-      </Layout>
+        <div className={styles.authors_categories}>
+          <TopAuthor />
+          <Categories />
+        </div>
+      </div>
     </>
   );
 };

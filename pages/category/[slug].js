@@ -16,21 +16,19 @@ const CategoryDetails = ({ category }) => {
         <meta name="blog" content="blog page" />
       </Head>
 
-      <Layout>
-        {categoryInfo.map((category, i) => (
-          <div className={styles.category} key={i}>
-            <div className={styles.category_name}>
-              <h1>{category.node.name}</h1>
-            </div>
-
-            <div className={styles.posts_container}>
-              {category?.node?.posts?.map((post, i) => (
-                <CategoryPost post={post} key={i} />
-              ))}
-            </div>
+      {categoryInfo.map((category, i) => (
+        <div className={styles.category} key={i}>
+          <div className={styles.category_name}>
+            <h1>{category.node.name}</h1>
           </div>
-        ))}
-      </Layout>
+
+          <div className={styles.posts_container}>
+            {category?.node?.posts?.map((post, i) => (
+              <CategoryPost post={post} key={i} />
+            ))}
+          </div>
+        </div>
+      ))}
     </>
   );
 };

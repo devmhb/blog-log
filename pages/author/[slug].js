@@ -16,32 +16,30 @@ const AuthorDetails = ({ author }) => {
         <title>{authorInfo?.node?.name}</title>
       </Head>
 
-      <Layout>
-        <div className={styles.author_infoC}>
-          <div className={styles.author_details}>
-            <div className={styles.author_img}>
-              <Image
-                src={Author}
-                height="100%"
-                width="100%"
-                alt={authorInfo?.node?.name}
-              />
-            </div>
-            <div className={styles.author_infos}>
-              <h1>Hi! I am {authorInfo?.node?.name}</h1>
-              <p className={styles.authorsbio}>{authorInfo?.node?.bio}</p>
-            </div>
+      <div className={styles.author_infoC}>
+        <div className={styles.author_details}>
+          <div className={styles.author_img}>
+            <Image
+              src={Author}
+              height="100%"
+              width="100%"
+              alt={authorInfo?.node?.name}
+            />
           </div>
-
-          <div className={styles.author_postsC}>
-            {authorInfo?.node?.posts?.map((post, i) => (
-              <div key={i} className={styles.author_posts}>
-                <AuthorPostCard post={post} author={authorInfo?.node?.name} />
-              </div>
-            ))}
+          <div className={styles.author_infos}>
+            <h1>Hi! I am {authorInfo?.node?.name}</h1>
+            <p className={styles.authorsbio}>{authorInfo?.node?.bio}</p>
           </div>
         </div>
-      </Layout>
+
+        <div className={styles.author_postsC}>
+          {authorInfo?.node?.posts?.map((post, i) => (
+            <div key={i} className={styles.author_posts}>
+              <AuthorPostCard post={post} author={authorInfo?.node?.name} />
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

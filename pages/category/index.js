@@ -12,9 +12,7 @@ const Category = ({ categories }) => {
         <meta name="description" content="category page" />
       </Head>
 
-      <Layout>
-        <Categories categories={categories} />
-      </Layout>
+      <Categories categories={categories} />
     </>
   );
 };
