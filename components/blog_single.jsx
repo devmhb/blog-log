@@ -8,11 +8,12 @@ import blogImg from "../images/blog_single img.png";
 
 const BlogSingle = ({ postDetails }) => {
   const [postDate, setPostDate] = useState();
+
   const handleDate = (postD) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    useEffect(() => {
-      setPostDate(new Date(postD).toLocaleDateString([], options));
-    }, [postDate]);
+    // useEffect(() => {
+    setPostDate(new Date(postD).toLocaleDateString([], options));
+    // }, [postDate]);
   };
 
   return (
@@ -30,7 +31,7 @@ const BlogSingle = ({ postDetails }) => {
         </div>
         <p
           className={styles.date}
-          onLoad={handleDate(postDetails?.node?.createdAt)}
+          onLoad={() => handleDate(postDetails?.node?.createdAt)}
         >
           {postDate}
         </p>

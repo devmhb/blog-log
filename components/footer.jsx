@@ -45,8 +45,9 @@ const Footer = () => {
             className={styles.email_input}
             type="text"
             placeholder="Your Email"
+            
           />
-          <input className={styles.btn} type="button" value="Subscribe" />
+          <input  className={styles.btn} type="button" value="Subscribe" />
         </div>
         <div className={styles.social_links}>
           <h5>Follow On:</h5>

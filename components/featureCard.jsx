@@ -3,19 +3,20 @@ import Image from "next/image";
 import DummyImg from "../images/Rectangle 2961.png";
 import styles from "../styles/components/featurecard.module.scss";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const featureCard = ({ posts }) => {
+const FeatureCard = ({ posts }) => {
   const postInfo = posts.edges;
 
   const filteredPosts = postInfo.filter((post) => post.node.featuredPost);
 
   const [postDate, setPostDate] = useState();
+
   const handleDate = (postD) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    useEffect(() => {
-      setPostDate(new Date(postD).toLocaleDateString([], options));
-    }, [postDate]);
+    // useEffect(() => {
+    setPostDate(new Date(postD).toLocaleDateString([], options));
+    // }, [postDate]);
   };
 
   return (
@@ -37,7 +38,7 @@ const featureCard = ({ posts }) => {
               </div>
               <p
                 className={styles.date}
-                onLoad={handleDate(post?.node?.author.createdAt)}
+                onLoad={() => handleDate(post?.node?.author.createdAt)}
               >
                 {postDate}
               </p>
@@ -50,4 +51,4 @@ const featureCard = ({ posts }) => {
   );
 };
 
-export default featureCard;
+export default FeatureCard;

@@ -10,9 +10,9 @@ const RecentCard = ({ posts }) => {
 
   const handleDate = (postD) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    useEffect(() => {
-      setPostDate(new Date(postD).toLocaleDateString([], options));
-    }, [postDate]);
+    // useEffect(() => {
+    setPostDate(new Date(postD).toLocaleDateString([], options));
+    // }, [postDate]);
   };
 
   return (
@@ -36,7 +36,7 @@ const RecentCard = ({ posts }) => {
                 </div>
                 <p
                   className={styles.author_name}
-                  onLoad={handleDate(post?.node?.author.createdAt)}
+                  onLoad={() => handleDate(post?.node?.author.createdAt)}
                 >
                   {postDate}
                 </p>
