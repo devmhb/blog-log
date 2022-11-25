@@ -4,7 +4,7 @@ import AuthorPostCard from "../../components/authorPostCard";
 import Image from "next/image";
 import Author from "../../images/author.jpg";
 import styles from "../../styles/components/authorDetails.module.scss";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import { getAuthor, getAuthors } from "../../service";
 
 const AuthorDetails = ({ author }) => {

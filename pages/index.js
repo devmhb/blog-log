@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import FeatureCards from "../components/featureCards";
 import PopularCards from "../components/popularCards";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import RecentCards from "../components/recentCards";
 import TopAuthorCards from "../components/topAuthorCards";
 import HomeCategories from "../components/homeCategories";
