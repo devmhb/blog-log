@@ -2,11 +2,10 @@ import React from "react";
 import { getCategories, getCategory } from "../../service";
 import styles from "../../styles/components/categoryDetail.module.scss";
 import Head from "next/head";
-import Layout from "../../components/Layout";
 import CategoryPost from "../../components/Categorypost";
 
 const CategoryDetails = ({ category }) => {
-  const { edges: categoryInfo } = category;
+  const categoryInfo = category?.edges;
   // console.log(categoryInfo);
 
   return (
@@ -16,7 +15,7 @@ const CategoryDetails = ({ category }) => {
         <meta name="blog" content="blog page" />
       </Head>
 
-      {categoryInfo.map((category, i) => (
+      {categoryInfo?.map((category, i) => (
         <div className={styles.category} key={i}>
           <div className={styles.category_name}>
             <h1>{category.node.name}</h1>

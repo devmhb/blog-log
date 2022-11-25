@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import Layout from "../../components/Layout";
 import Categories from "../../components/Categories.jsx";
 import { getCategories } from "../../service";
 
