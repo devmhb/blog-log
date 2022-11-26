@@ -56,6 +56,12 @@
   }
 
   .nav_container > .burger_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    width: 50%;
     position: absolute;
     top: 100%;
     left: 0;
