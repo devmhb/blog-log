@@ -2,18 +2,15 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/components/blog.module.scss";
 import { useState, useEffect } from "react";
-// import FeatureCard from "../components/featureCard";
-
-import blogImg from "../images/blog_single img.png";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const BlogSingle = ({ postDetails }) => {
+  // console.log(postDetails);
   const [postDate, setPostDate] = useState();
 
   const handleDate = (postD) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    // useEffect(() => {
     setPostDate(new Date(postD).toLocaleDateString([], options));
-    // }, [postDate]);
   };
 
   return (
@@ -26,7 +23,7 @@ const BlogSingle = ({ postDetails }) => {
         <div className={styles.author}>
           {/* <Image src="" width ="20" height="20" alt='author'/> */}
           <p className={styles.author_name}>
-            {postDetails?.node?.author?.name}{" "}
+            {postDetails?.node?.author?.name}
           </p>
         </div>
         <p
@@ -37,19 +34,18 @@ const BlogSingle = ({ postDetails }) => {
         </p>
       </div>
       <div className={styles.blog_imgC}>
-        <Image src={blogImg} width="" height="" alt="author" />
+        <Image
+          src={postDetails?.node?.featuredImage[0]?.url}
+          // style={{ width: "100%", height: "100%" }}
+          layout="fill"
+          alt="featured image"
+        />
       </div>
-      <p className={styles.blog_desc}>{postDetails?.node?.content?.text}</p>
-      <h3 className={styles.sub_title}>
-        I Created a Developer Rap Video - Heres What I Learned
-      </h3>
-      <p className={styles.sub_desc}>
-        Did you come here for something in particular or just general
-        Riker-bashing? And blowing into maximum warp speed, you appeared for an
-        instant to be in two places at once. We have a saboteur aboard. We know
-        you’re dealing in stolen ore. But I wanna talk about the assassination
-        attempt
-      </p>
+      <div className="post-detials">
+        <RichText content={postDetails?.node?.content?.raw} />
+      </div>
+      <h3 className={styles.sub_title}></h3>
+      <p className={styles.sub_desc}></p>
 
       <div className={styles.related_postsC}>
         <h2 className={styles.related_post_heading}>

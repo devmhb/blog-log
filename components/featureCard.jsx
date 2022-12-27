@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import DummyImg from "../images/Rectangle 2961.png";
 import styles from "../styles/components/featurecard.module.scss";
 import Link from "next/link";
 import { useState } from "react";
@@ -14,9 +13,7 @@ const FeatureCard = ({ posts }) => {
 
   const handleDate = (postD) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    // useEffect(() => {
     setPostDate(new Date(postD).toLocaleDateString([], options));
-    // }, [postDate]);
   };
 
   return (
@@ -29,7 +26,13 @@ const FeatureCard = ({ posts }) => {
             </p>
             <h1 className={styles.feature_title}>{post.node.title}</h1>
             <div className={styles.feature_img}>
-              <Image src={DummyImg} alt="img" width="" height="" />
+              <Image
+                src={post?.node?.featuredImage[0]?.url}
+                width="100"
+                height="100"
+                alt="img"
+                layout="responsive"
+              />
             </div>
             <div className={styles.feature_info}>
               <div className={styles.author}>

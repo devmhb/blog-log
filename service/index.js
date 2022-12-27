@@ -15,6 +15,12 @@ export const getPosts = async () => {
             author {
               name
               createdAt
+              photo {
+                url
+              }
+            }
+            featuredImage {
+              url
             }
             categories {
               name
@@ -48,10 +54,13 @@ export const getPostDetails = async (slug) => {
               id
             }
             content {
-              text
+              raw
             }
             categories {
               name
+            }
+            featuredImage {
+              url
             }
           }
         }
@@ -82,12 +91,6 @@ export const getCategories = async () => {
 };
 
 export const getCategory = async (slug) => {
-  // ei khane apne post nah anle koi theke paben bal
-  // apne toh just category r nam r slug r id nichen post gula nen taile sen paiben bal
-  // ami eikhaneo ansilam
-  // akhon anen abr dekhi
-  // r buijha ainen mane oije payground oi khane check kore niyen
-  // ho eigula check korei anchilam
   const query = gql`
     query MyQuery($slug: String!) {
       categoriesConnection(where: { slug: $slug }) {
@@ -100,7 +103,7 @@ export const getCategory = async (slug) => {
             posts {
               title
               excerpt
-              photo {
+              featuredImage {
                 url
               }
               slug

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../styles/components/recentCard.module.scss";
 import DummyImg from "../images/Rectangle 2961.png";
 import Link from "next/link";
@@ -7,12 +7,11 @@ import Link from "next/link";
 const RecentCard = ({ posts }) => {
   const [postDate, setPostDate] = useState();
   const postInfo = posts.edges;
+  // console.log(postInfo);
 
   const handleDate = (postD) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    // useEffect(() => {
     setPostDate(new Date(postD).toLocaleDateString([], options));
-    // }, [postDate]);
   };
 
   return (
@@ -21,7 +20,13 @@ const RecentCard = ({ posts }) => {
         <Link href={`/blog/${post.node.slug}`} key={i}>
           <div className={styles.recentC} key={i}>
             <div className={styles.recentC_left}>
-              <Image src={DummyImg} alt="img" layout="responsive" />
+              <Image
+                src={post?.node?.featuredImage[0]?.url}
+                width="100"
+                height="100"
+                alt="img"
+                layout="responsive"
+              />
             </div>
 
             <div className={styles.recentC_right}>

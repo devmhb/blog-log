@@ -8,7 +8,7 @@ import { getAuthor, getAuthors } from "../../service";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
-  console.log(authorInfo);
+  // console.log(authorInfo);
   return (
     <>
       <Head>
