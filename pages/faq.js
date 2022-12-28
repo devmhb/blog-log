@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/faq.module.scss";
 import Head from "next/head";
-import FaqItems from "../components/faqItems";
+import FaqItems from "../components/FaqItems";
 
 const FAQ = () => {
   return (

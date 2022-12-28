@@ -6,7 +6,6 @@ import CategoryPost from "../../components/Categorypost";
 
 const CategoryDetails = ({ category }) => {
   const categoryInfo = category?.edges;
-  // console.log(categoryInfo);
 
   return (
     <>

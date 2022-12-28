@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/components/homeCategories.module.scss";
-import HomeCategory from "./homeCategory";
+import HomeCategory from "./HomeCategory";
 
 const homeCategories = ({ categories }) => {
   const categoriesInfo = categories?.edges;

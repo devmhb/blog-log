@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import AuthorPostCard from "../../components/authorPostCard";
+import AuthorPostCard from "../../components/AuthorPostCard";
 import Image from "next/image";
 import Author from "../../images/author.jpg";
 import styles from "../../styles/components/authorDetails.module.scss";

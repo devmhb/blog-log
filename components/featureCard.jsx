@@ -29,7 +29,7 @@ const FeatureCard = ({ posts }) => {
               <Image
                 src={post?.node?.featuredImage[0]?.url}
                 width="100"
-                height="100"
+                height="60"
                 alt="img"
                 layout="responsive"
               />

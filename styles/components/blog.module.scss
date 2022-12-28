@@ -19,11 +19,6 @@
     }
   }
 
-  p {
-    margin: 1rem 0 1rem 0;
-    color: $black-2;
-  }
-
   .related_postsC {
     padding-top: 3rem;
     h2 {
@@ -38,4 +33,9 @@
   position: relative;
   width: 200px;
   height: 200px;
+}
+.post_detials {
+  p {
+    width: 60%;
+  }
 }

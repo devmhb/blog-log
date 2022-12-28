@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../../styles/blog.module.scss";
-import BlogSingle from "../../components/blog_single";
-import TopAuthor from "../../components/topAuthorCards";
-import Categories from "../../components/homeCategories";
+import BlogSingle from "../../components/BlogSingle";
+import TopAuthor from "../../components/TopAuthorCards";
+import Categories from "../../components/HomeCategories";
 import { getPostDetails, getPosts } from "../../service";
 
 const Blog = ({ post }) => {
@@ -19,10 +19,10 @@ const Blog = ({ post }) => {
         <div className={styles.blog}>
           <BlogSingle postDetails={postDetails} />
         </div>
-        <div className={styles.authors_categories}>
+        {/* <div className={styles.authors_categories}>
           <TopAuthor />
           <Categories />
-        </div>
+        </div> */}
       </div>
     </>
   );

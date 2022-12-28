@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/components/blog.module.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const BlogSingle = ({ postDetails }) => {
@@ -20,12 +20,11 @@ const BlogSingle = ({ postDetails }) => {
       </p>
       <h1 className={styles.blog_title}>{postDetails?.node?.title}</h1>
       <div className={styles.blogC_info}>
-        <div className={styles.author}>
-          {/* <Image src="" width ="20" height="20" alt='author'/> */}
+        {/* <div className={styles.author}>
           <p className={styles.author_name}>
             {postDetails?.node?.author?.name}
           </p>
-        </div>
+        </div> */}
         <p
           className={styles.date}
           onLoad={() => handleDate(postDetails?.node?.createdAt)}
@@ -34,14 +33,13 @@ const BlogSingle = ({ postDetails }) => {
         </p>
       </div>
       <div className={styles.blog_imgC}>
-        <Image
+        {/* <Image
           src={postDetails?.node?.featuredImage[0]?.url}
-          // style={{ width: "100%", height: "100%" }}
           layout="fill"
           alt="featured image"
-        />
+        /> */}
       </div>
-      <div className="post-detials">
+      <div className={styles.post_detials}>
         <RichText content={postDetails?.node?.content?.raw} />
       </div>
       <h3 className={styles.sub_title}></h3>
@@ -51,7 +49,6 @@ const BlogSingle = ({ postDetails }) => {
         <h2 className={styles.related_post_heading}>
           <span>See related</span> Posts
         </h2>
-        {/* <FeatureCard /> */}
       </div>
     </div>
   );

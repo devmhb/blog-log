@@ -7,7 +7,7 @@ const HomeCategory = ({ category }) => {
     <Link href={`/category/${category.node.slug}`}>
       <div className={styles.categories_wrapper}>
         <div className={styles.categories}>
-          <p className={styles.category_name}>{category.node.name}</p>
+          <h4 className={styles.category_name}>{category.node.name}</h4>
         </div>
       </div>
     </Link>

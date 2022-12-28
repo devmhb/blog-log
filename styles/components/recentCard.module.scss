@@ -2,6 +2,7 @@
 @import "../mixins";
 
 .recentC {
+  cursor: pointer;
   display: flex;
   gap: 2rem;
   @media screen and (max-width: 768px) {
@@ -11,10 +12,10 @@
   &_left {
     flex: 1;
     overflow: hidden;
-
     img {
+      border-radius: 3px;
       width: 100%;
-      overflow: hidden;
+      height: fit-content;
     }
   }
 

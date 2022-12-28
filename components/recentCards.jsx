@@ -1,5 +1,5 @@
 import React from "react";
-import RecentCard from "./recentCard";
+import RecentCard from "./RecentCard";
 import styles from "../styles/components/recentCards.module.scss";
 
 const RecentCards = ({ posts }) => {

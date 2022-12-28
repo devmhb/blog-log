@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "../styles/components/recentCard.module.scss";
-import DummyImg from "../images/Rectangle 2961.png";
 import Link from "next/link";
 
 const RecentCard = ({ posts }) => {
@@ -21,9 +20,10 @@ const RecentCard = ({ posts }) => {
           <div className={styles.recentC} key={i}>
             <div className={styles.recentC_left}>
               <Image
+                className="r_img"
                 src={post?.node?.featuredImage[0]?.url}
                 width="100"
-                height="100"
+                height="65"
                 alt="img"
                 layout="responsive"
               />
