@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/components/about_author.module.scss";
-import authorImg from "../images/Rectangle 3039.png";
 import Link from "next/link";
 
 const AboutAuthor = ({ authors }) => {
