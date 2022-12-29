@@ -34,9 +34,6 @@ li {
   padding: 0;
   box-sizing: border-box;
 }
-.post-details pre {
-  // overflow-x: scroll;
-}
 
 // Navbar
 
@@ -46,4 +43,8 @@ li {
 
 .navitem {
   width: 100rem;
+}
+img {
+  object-fit: cover;
+  border-radius: 3px;
 }
