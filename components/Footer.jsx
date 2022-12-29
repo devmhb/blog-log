@@ -56,26 +56,27 @@ const Footer = () => {
         </div>
         <div className={styles.social_links}>
           <h5>Follow On:</h5>
-          <Link href="https://www.facebook.com/devmhb/" target="_blank">
-            <div className={styles.link}>
-              <FontAwesomeIcon icon={faFacebook} />
-            </div>
-          </Link>
+          <div className={styles.link_con}>
+            <Link href="https://www.facebook.com/devmhb/" target="_blank">
+              <div className={styles.link}>
+                <FontAwesomeIcon icon={faFacebook} />
+              </div>
+            </Link>
 
-          <Link href="">
-            <div className={styles.link}>
-              <FontAwesomeIcon icon={faTwitter} />
-            </div>
-          </Link>
+            <Link href="">
+              <div className={styles.link}>
+                <FontAwesomeIcon icon={faTwitter} />
+              </div>
+            </Link>
 
-          <Link href="https://www.instagram.com/devmhb/">
-            <div className={styles.link}>
-              <FontAwesomeIcon icon={faInstagram} />
-            </div>
-          </Link>
+            <Link href="https://www.instagram.com/devmhb/">
+              <div className={styles.link}>
+                <FontAwesomeIcon icon={faInstagram} />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
-      <p className={styles.copyrights}>Copyright@2022 devmhb.ALL Reserved </p>
     </footer>
   );
 };

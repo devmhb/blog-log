@@ -32,13 +32,13 @@ const BlogSingle = ({ postDetails }) => {
           {postDate}
         </p>
       </div>
-      <div className={styles.blog_imgC}>
-        {/* <Image
+      {/* <div className={styles.blog_imgC}>
+        <Image
           src={postDetails?.node?.featuredImage[0]?.url}
           layout="fill"
           alt="featured image"
-        /> */}
-      </div>
+        />
+      </div> */}
       <div className={styles.post_detials}>
         <RichText content={postDetails?.node?.content?.raw} />
       </div>

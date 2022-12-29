@@ -4,7 +4,7 @@
 .feature {
   cursor: pointer;
   flex: 1 240px;
-
+  min-width: 300px;
   .categories {
     @include btn-fill-pri(6px 8px, $tag);
     border-radius: 3px;

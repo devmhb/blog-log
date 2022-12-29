@@ -61,16 +61,29 @@
       .btn {
         @include btn-fill-pri(1rem 3rem, $tag);
         border-radius: 0 5px 5px 0;
+        @media screen and (max-width: 768px) {
+          margin-top: 1rem;
+          border-radius: 5px;
+        }
       }
     }
     .social_links {
       display: flex;
       flex-direction: row;
       gap: 0.4rem;
-      .link {
-        cursor: pointer;
-        height: 0.5rem;
-        width: 1rem;
+      @media screen and (max-width: 768px) {
+        align-items: center;
+        flex-direction: column;
+      }
+      .link_con {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        .link {
+          cursor: pointer;
+          height: 0.5rem;
+          width: 1rem;
+        }
       }
     }
   }

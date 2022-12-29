@@ -2,6 +2,12 @@
 @import "../variables";
 
 .blog_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  padding-right: 2rem;
   .category_name {
     @include btn-fill-pri(6px 8px, $tag);
   }
@@ -36,6 +42,6 @@
 }
 .post_detials {
   p {
-    width: 60%;
+    width: 100%;
   }
 }
