@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import FeatureCards from "../components/featureCards";
-import PopularCards from "../components/PopularCards";
-import RecentCards from "../components/RecentCards";
-import TopAuthorCards from "../components/TopAuthorCards";
+import PopularCards from "../components/popularCards";
+import RecentCards from "../components/recentCards";
+import TopAuthorCards from "../components/topAuthorCards";
 import HomeCategories from "../components/HomeCategories";
 import { getAuthors, getCategories, getPosts } from "../service";
 

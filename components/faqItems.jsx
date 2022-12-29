@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/components/faqItem.module.scss";
-import FaqItem from "./FaqItem";
+import FaqItem from "./faqItem";
 
 const FaqItems = () => {
   return (
