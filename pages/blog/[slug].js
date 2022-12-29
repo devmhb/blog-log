@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import styles from "../../styles/blog.module.scss";
 import BlogSingle from "../../components/BlogSingle";
-import TopAuthor from "../../components/TopAuthorCards";
-import Categories from "../../components/HomeCategories";
+// import TopAuthor from "../../components/TopAuthorCards";
+// import Categories from "../../components/HomeCategories";
 import { getPostDetails, getPosts } from "../../service";
 
 const Blog = ({ post }) => {

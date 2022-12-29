@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/components/navbar.module.scss";
 import { useState } from "react";
+
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
   const [burger, setBurger] = useState(false);
