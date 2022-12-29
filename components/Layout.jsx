@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./footer";
+import Footer from "./Footer";
 import Navbar from "./navbar";
 import { CategoriesProvider } from "./categoriesContext";
 
