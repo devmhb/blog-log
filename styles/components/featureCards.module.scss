@@ -1,19 +1,18 @@
 @import "../mixins";
 .feature_container {
-    flex: 1 calc(70% - 1rem);
-
-    h5 {
-        margin-bottom: 1rem;
-        span {
-            @include btn-fill-pri(3px 5px, 1.7rem);
-            border-radius: 3px;
-        }
+  flex: 1 calc(60% - 6rem);
+  min-width: 240px;
+  h5 {
+    margin-bottom: 1rem;
+    span {
+      @include btn-fill-pri(3px 5px, 1.7rem);
+      border-radius: 3px;
     }
-    .cards_container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 20px;
-    }
-    
+  }
+  .cards_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }

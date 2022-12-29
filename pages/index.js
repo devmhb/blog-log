@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import FeatureCards from "../components/FeatureCards";
+import FeatureCards from "../components/featureCards";
 import PopularCards from "../components/PopularCards";
 import RecentCards from "../components/RecentCards";
 import TopAuthorCards from "../components/TopAuthorCards";

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import AuthorPostCard from "../../components/AuthorPostCard";
+import AuthorPostCard from "../../components/authorPostCard";
 import Image from "next/image";
 import styles from "../../styles/components/authorDetails.module.scss";
 import { getAuthor, getAuthors } from "../../service";
