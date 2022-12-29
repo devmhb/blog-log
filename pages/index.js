@@ -4,7 +4,7 @@ import FeatureCards from "../components/featureCards";
 import PopularCards from "../components/popularCards";
 import RecentCards from "../components/recentCards";
 import TopAuthorCards from "../components/topAuthorCards";
-import HomeCategories from "../components/HomeCategories";
+import HomeCategories from "../components/homeCategories";
 import { getAuthors, getCategories, getPosts } from "../service";
 
 export default function Home({ posts, authors, categories }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import PopularCard from "./PopularCard";
+import PopularCard from "./popularCard";
 import styles from "../styles/components/popularCards.module.scss";
 
 const PopularCards = () => {
