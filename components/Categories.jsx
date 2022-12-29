@@ -1,7 +1,7 @@
 import React from "react";
 import Category from "./Category";
 import styles from "../styles/components/categories.module.scss";
-import Link from "next/link";
+// import Link from "next/link";
 
 const Categories = ({ categories }) => {
   return (

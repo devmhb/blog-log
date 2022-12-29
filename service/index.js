@@ -81,6 +81,9 @@ export const getCategories = async () => {
             name
             slug
             createdAt
+            featuredImage {
+              url
+            }
           }
         }
       }

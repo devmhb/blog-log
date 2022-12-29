@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Categories from "../../components/Categories.jsx";
+import Categories from "../../components/Categories";
 import { getCategories } from "../../service";
 
 const Category = ({ categories }) => {

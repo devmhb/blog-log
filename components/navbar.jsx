@@ -1,7 +1,9 @@
+import React from "react";
 import Link from "next/link";
 import styles from "../styles/components/navbar.module.scss";
 import { useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
   const [burger, setBurger] = useState(false);
@@ -26,7 +28,10 @@ const Navbar = () => {
         </li>
         <div className={styles.dropdown}>
           <li onClick={handleDropdown}>
-            Pages <span>↓</span>
+            Pages
+            <span className={styles.arrow}>
+              <FontAwesomeIcon icon={faArrowDown} />
+            </span>
           </li>
           {dropdown && (
             <div className={styles.dropdown_items}>

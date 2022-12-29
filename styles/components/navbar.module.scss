@@ -31,6 +31,10 @@
   background-color: #00aaa1;
   z-index: 99;
 }
+.dropdown .arrow {
+  width: 0.5rem;
+  display: none;
+}
 .nav_container .navitems .dropdown > .dropdown_items {
   position: absolute;
   top: 120%;

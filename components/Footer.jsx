@@ -2,6 +2,12 @@ import React, { useContext } from "react";
 import styles from "../styles/components/footer.module.scss";
 import Link from "next/link";
 import { CategoriesContext } from "./categoriesContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const categoriesInfo = useContext(CategoriesContext);
@@ -29,7 +35,7 @@ const Footer = () => {
       <div className={styles.quick_linksC}>
         <h5>Quick links</h5>
         <div className={styles.linksC}>
-          <Link href="/FAQ">
+          <Link href="/faq">
             <a>FAQ</a>
           </Link>
           <a href="">Terms & conditions</a>
@@ -50,12 +56,26 @@ const Footer = () => {
         </div>
         <div className={styles.social_links}>
           <h5>Follow On:</h5>
-          <i>Facebook</i>
-          <i>Twitter</i>
-          <i>Pinterest</i>
-          <i>Instagram</i>
+          <Link href="https://www.facebook.com/devmhb/" target="_blank">
+            <div className={styles.link}>
+              <FontAwesomeIcon icon={faFacebook} />
+            </div>
+          </Link>
+
+          <Link href="">
+            <div className={styles.link}>
+              <FontAwesomeIcon icon={faTwitter} />
+            </div>
+          </Link>
+
+          <Link href="https://www.instagram.com/devmhb/">
+            <div className={styles.link}>
+              <FontAwesomeIcon icon={faInstagram} />
+            </div>
+          </Link>
         </div>
       </div>
+      <p className={styles.copyrights}>Copyright@2022 devmhb.ALL Reserved </p>
     </footer>
   );
 };

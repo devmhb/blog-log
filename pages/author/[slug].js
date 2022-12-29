@@ -2,13 +2,12 @@ import Head from "next/head";
 import React from "react";
 import AuthorPostCard from "../../components/AuthorPostCard";
 import Image from "next/image";
-import Author from "../../images/author.jpg";
 import styles from "../../styles/components/authorDetails.module.scss";
 import { getAuthor, getAuthors } from "../../service";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
-  // console.log(authorInfo);
+  console.log(authorInfo);
   return (
     <>
       <Head>
@@ -19,9 +18,9 @@ const AuthorDetails = ({ author }) => {
         <div className={styles.author_details}>
           <div className={styles.author_img}>
             <Image
-              src={Author}
-              height="100%"
-              width="100%"
+              src={authorInfo?.node?.photo?.url}
+              height="100"
+              width="100"
               alt={authorInfo?.node?.name}
             />
           </div>

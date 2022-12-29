@@ -26,6 +26,7 @@
     .blogC {
       display: flex;
       flex-direction: column;
+      text-transform: capitalize;
     }
   }
 
@@ -64,6 +65,16 @@
         border-radius: 0 5px 5px 0;
       }
     }
+    .social_links {
+      display: flex;
+      flex-direction: row;
+      gap: 0.4rem;
+      .link {
+        cursor: pointer;
+        height: 0.5rem;
+        width: 1rem;
+      }
+    }
   }
   h5,
   h3 {
@@ -75,5 +86,12 @@
     color: $black-3;
     margin-top: 0.3rem;
     cursor: pointer;
+    font-size: 1rem;
   }
+}
+
+.copyrights {
+  font-size: small;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
 }
