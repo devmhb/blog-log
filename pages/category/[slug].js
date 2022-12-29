@@ -37,7 +37,7 @@ export async function getStaticPaths() {
   const { edges: category } = await getCategories();
   return {
     paths: category.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: true,
+    fallback: false,
   };
 }
 
