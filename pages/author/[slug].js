@@ -1,13 +1,13 @@
 import Head from "next/head";
 import React from "react";
-import AuthorPostCard from "../../components/authorPostCard";
 import Image from "next/image";
 import styles from "../../styles/components/authorDetails.module.scss";
 import { getAuthor, getAuthors } from "../../service";
+import Card from "../../components/Card";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
-  console.log(authorInfo);
+  // console.log(authorInfo);
   return (
     <>
       <Head>
@@ -27,14 +27,13 @@ const AuthorDetails = ({ author }) => {
           <div className={styles.author_infos}>
             <h1>Hi! I am {authorInfo?.node?.name}</h1>
             <p className={styles.authorsbio}>{authorInfo?.node?.bio}</p>
+            <p className={styles.authorsbio}>{authorInfo?.node?.description}</p>
           </div>
         </div>
 
-        <div className={styles.author_postsC}>
-          {authorInfo?.node?.posts?.map((post, i) => (
-            <div key={i} className={styles.author_posts}>
-              <AuthorPostCard post={post} author={authorInfo?.node?.name} />
-            </div>
+        <div className="cards">
+          {authorInfo?.node?.posts?.map((post) => (
+            <Card post={post} key={post.id} />
           ))}
         </div>
       </div>

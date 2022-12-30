@@ -1,11 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import FeatureCards from "../components/featureCards";
-import PopularCards from "../components/popularCards";
-import RecentCards from "../components/recentCards";
 import TopAuthorCards from "../components/topAuthorCards";
 import HomeCategories from "../components/homeCategories";
 import { getAuthors, getCategories, getPosts } from "../service";
+import RecentCards from "../components/RecentCards";
+import RegularCards from "../components/RegularCards";
 
 export default function Home({ posts, authors, categories }) {
   // console.log(posts);
@@ -19,13 +19,13 @@ export default function Home({ posts, authors, categories }) {
       <div className={styles.hero}>
         <div className={styles.wrapper}>
           <FeatureCards posts={posts} />
-          <PopularCards />
+          <RecentCards />
         </div>
       </div>
 
       <div className={styles.home_bottom_container}>
         <div className={styles.recent}>
-          <RecentCards posts={posts} />
+          <RegularCards posts={posts} />
         </div>
         <div className={styles.home_bottom_right}>
           <HomeCategories categories={categories} />

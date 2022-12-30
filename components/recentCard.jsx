@@ -1,57 +1,28 @@
 import Image from "next/image";
-import React, { useState } from "react";
-import styles from "../styles/components/recentCard.module.scss";
 import Link from "next/link";
+import React from "react";
+import styles from "../styles/components/recentCard.module.scss";
 
-const RecentCard = ({ posts }) => {
-  const [postDate, setPostDate] = useState();
-  const postInfo = posts.edges;
-  // console.log(postInfo);
-
-  const handleDate = (postD) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    setPostDate(new Date(postD).toLocaleDateString([], options));
-  };
-
+const RecentCard = ({ post }) => {
+  //   console.log(post);
   return (
-    <>
-      {postInfo.map((post, i) => (
-        <Link href={`/blog/${post.node.slug}`} key={i}>
-          <div className={styles.recentC} key={i}>
-            <div className={styles.recentC_left}>
-              <Image
-                className="r_img"
-                src={post?.node?.featuredImage[0]?.url}
-                width="100"
-                height="65"
-                alt="img"
-                layout="responsive"
-              />
+    <Link href={`/blog/${post?.slug}`}>
+      <div className={styles.popularC}>
+        <button className={styles.categories}>
+          {post?.categories[0]?.name}
+        </button>
+        <h2 className={styles.popularC_title}>{post?.title}</h2>
+        <div className={styles.popularC_info}>
+          <div className={styles.author}>
+            <div className={styles.author_img}>
+              <Image src={post.author.photo.url} layout="fill" alt="author" />
             </div>
-
-            <div className={styles.recentC_right}>
-              <button className={styles.categories}>
-                {post?.node?.categories[0]?.name}
-              </button>
-              <h2 className={styles.recentC_title}>{post?.node?.title}</h2>
-              <div className={styles.recentC_info}>
-                <div className={styles.author}>
-                  {/* <Image src="" width ="20" height="20" alt='author'/> */}
-                  <p className={styles.author_name}>{post.node.author.name}</p>
-                </div>
-                <p
-                  className={styles.author_name}
-                  onLoad={() => handleDate(post?.node?.author.createdAt)}
-                >
-                  {postDate}
-                </p>
-              </div>
-              <p className={styles.recentC_desc}>{post?.node?.excerpt}</p>
-            </div>
+            <p className={styles.author_name}>{post?.author?.name}</p>
           </div>
-        </Link>
-      ))}
-    </>
+        </div>
+        <p className={styles.popularC_desc}>{post.excerpt}</p>
+      </div>
+    </Link>
   );
 };
 

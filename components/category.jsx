@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Category = ({ category }) => {
-  console.log(category);
+  // console.log(category);
 
   return (
     <Link href={`/category/${category.node.slug}`}>

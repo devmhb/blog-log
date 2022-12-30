@@ -1,14 +1,16 @@
 import React from "react";
 import Footer from "./Footer";
-import Navbar from "./navbar";
 import { CategoriesProvider } from "./categoriesContext";
+import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
     <>
       <CategoriesProvider>
         <Navbar />
-        {children}
+        <div style={{ margin: "0 auto", maxWidth: "1480px", width: "100%" }}>
+          {children}
+        </div>
         <Footer />
       </CategoriesProvider>
     </>

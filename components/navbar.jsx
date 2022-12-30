@@ -19,10 +19,10 @@ const Navbar = () => {
     <nav className={styles.nav_container}>
       <ul className={styles.navitems}>
         <li className={styles.navitem}>
-          <Link href="/">Homepage</Link>
+          <Link href="/">Home</Link>
         </li>
         <li className={styles.navitem}>
-          <Link href="/about">About Us</Link>
+          <Link href="/about">About</Link>
         </li>
         <li className={styles.navitem}>
           <Link href="/category">Category</Link>
@@ -36,10 +36,10 @@ const Navbar = () => {
           </li>
           {dropdown && (
             <div className={styles.dropdown_items}>
-              <li>
-                <Link href="/contact">ContactUs</Link>
+              <li onClick={handleDropdown}>
+                <Link href="/contact">Contact</Link>
               </li>
-              <li>
+              <li onClick={handleDropdown}>
                 <Link href="/faq">FAQ</Link>
               </li>
             </div>
@@ -49,13 +49,13 @@ const Navbar = () => {
 
       {burger && (
         <ul className={styles.burger_items}>
-          <li>
-            <Link href="/">Homepage</Link>
+          <li onClick={handleNavbar}>
+            <Link href="/">Home</Link>
           </li>
-          <li>
-            <Link href="/about">About Us</Link>
+          <li onClick={handleNavbar}>
+            <Link href="/about">About</Link>
           </li>
-          <li>
+          <li onClick={handleNavbar}>
             <Link href="/category">Category</Link>
           </li>
           <div className={styles.dropdown}>
@@ -64,10 +64,10 @@ const Navbar = () => {
             </li>
             {dropdown && (
               <div className={styles.dropdown_items}>
-                <li>
-                  <Link href="/contact">ContactUs</Link>
+                <li onClick={handleNavbar}>
+                  <Link href="/contact">Contact</Link>
                 </li>
-                <li>
+                <li onClick={handleNavbar}>
                   <Link href="/faq">FAQ</Link>
                 </li>
               </div>
@@ -85,7 +85,9 @@ const Navbar = () => {
         <span className={styles.item}></span>
       </div>
       <Link href="/">
-        <h1 className={styles.logo}>BLOG</h1>
+        <h1 className={styles.logo}>
+          <span>Blog</span> LOG
+        </h1>
       </Link>
     </nav>
   );

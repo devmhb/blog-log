@@ -1,48 +1,53 @@
-@import "../variables";
 @import "../mixins";
 
-.recentC {
-  cursor: pointer;
+.popularC {
   display: flex;
-  gap: 2rem;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  cursor: pointer;
+
+  .categories {
+    @include btn-fill-pri(6px 8px, $tag);
+    border-radius: 3px;
   }
 
-  &_left {
-    flex: 1;
-    overflow: hidden;
+  &_title {
+    font: $h5;
+    margin: 8px 0;
   }
 
-  &_right {
-    flex: 1;
-    .categories {
-      @include btn-fill-pri(6px 8px, $tag);
-      border-radius: 3px;
-    }
+  &_info {
+    color: $black-3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: $tag;
 
-    .recentC_title {
-      font: $h1;
-    }
-
-    .recentC_info {
+    .author {
       display: flex;
       align-items: center;
-      gap: 12px;
-      color: $black-3;
-      font: $tag;
+      gap: 5px;
 
-      .author {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+      &_img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      &_name {
       }
     }
 
-    .recentC_desc {
-      font: $p;
-      color: $black-1;
-      margin-top: 7px;
+    .date {
     }
+  }
+
+  &_desc {
+    color: $black-1;
+    margin-top: 8px;
+    font: $p;
   }
 }

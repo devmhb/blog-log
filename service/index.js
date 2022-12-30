@@ -1,6 +1,9 @@
 import { gql, request } from "graphql-request";
 
 const graphqlApi = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const requestHeaders = {
+  Authorization: `Bearer ${process.env.NEXT_PUBLIC_GRAPHCMS_TOKEN}`,
+};
 
 export const getPosts = async () => {
   const query = gql`
@@ -32,7 +35,7 @@ export const getPosts = async () => {
     }
   `;
 
-  const result = await request(graphqlApi, query);
+  const result = await request(graphqlApi, query, {}, requestHeaders);
   return result.postsConnection;
 };
 
@@ -58,6 +61,7 @@ export const getPostDetails = async (slug) => {
             }
             categories {
               name
+              slug
             }
             featuredImage {
               url
@@ -68,7 +72,7 @@ export const getPostDetails = async (slug) => {
     }
   `;
 
-  const result = await request(graphqlApi, query, { slug });
+  const result = await request(graphqlApi, query, { slug }, requestHeaders);
   return result.postsConnection;
 };
 
@@ -89,7 +93,7 @@ export const getCategories = async () => {
       }
     }
   `;
-  const result = await request(graphqlApi, query);
+  const result = await request(graphqlApi, query, {}, requestHeaders);
   return result.categoriesConnection;
 };
 
@@ -110,6 +114,16 @@ export const getCategory = async (slug) => {
                 url
               }
               slug
+              id
+              author {
+                name
+                photo {
+                  url
+                }
+              }
+              categories {
+                name
+              }
             }
           }
         }
@@ -117,7 +131,7 @@ export const getCategory = async (slug) => {
     }
   `;
 
-  const result = await request(graphqlApi, query, { slug });
+  const result = await request(graphqlApi, query, { slug }, requestHeaders);
   return result.categoriesConnection;
 };
 
@@ -142,7 +156,7 @@ export const getAuthors = async () => {
       }
     }
   `;
-  const result = await request(graphqlApi, query);
+  const result = await request(graphqlApi, query, {}, requestHeaders);
   return result.authorsConnection;
 };
 
@@ -154,6 +168,7 @@ export const getAuthor = async (slug) => {
           node {
             name
             bio
+            description
             photo {
               url
             }
@@ -168,12 +183,77 @@ export const getAuthor = async (slug) => {
               }
               title
               slug
+              id
+              author {
+                name
+                photo {
+                  url
+                }
+              }
             }
           }
         }
       }
     }
   `;
-  const result = await request(graphqlApi, query, { slug });
+  const result = await request(graphqlApi, query, { slug }, requestHeaders);
   return result.authorsConnection;
+};
+
+export const getRecentPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      posts(orderBy: publishedAt_ASC, last: 2) {
+        title
+        featuredImage {
+          url
+        }
+        slug
+        id
+        excerpt
+        categories {
+          name
+        }
+        author {
+          photo {
+            url
+          }
+          name
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlApi, query, {}, requestHeaders);
+  return result.posts;
+};
+
+export const getRelatedPosts = async (categories, slug) => {
+  const query = gql`
+    query GetPostDetails($slug: String!, $categories: [String!]) {
+      posts(
+        where: {
+          slug_not: $slug
+          AND: { categories_some: { slug_in: $categories } }
+        }
+        last: 3
+      ) {
+        title
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+        id
+      }
+    }
+  `;
+
+  const result = await request(
+    graphqlApi,
+    query,
+    { categories, slug },
+    requestHeaders
+  );
+
+  return result.posts;
 };

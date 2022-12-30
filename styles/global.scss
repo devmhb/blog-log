@@ -36,7 +36,6 @@ li {
 }
 
 // Navbar
-
 .category_name {
   margin-bottom: 10rem;
 }
@@ -44,4 +43,32 @@ li {
 img {
   object-fit: cover;
   border-radius: 3px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+
+  & > * {
+    flex: 1 1 200px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  // border: 1px solid #00aaa1;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00aaa1;
 }

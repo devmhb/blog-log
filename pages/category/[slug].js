@@ -2,7 +2,7 @@ import React from "react";
 import { getCategories, getCategory } from "../../service";
 import styles from "../../styles/components/categoryDetail.module.scss";
 import Head from "next/head";
-import CategoryPost from "../../components/Categorypost";
+import Card from "../../components/Card";
 
 const CategoryDetails = ({ category }) => {
   const categoryInfo = category?.edges;
@@ -20,9 +20,9 @@ const CategoryDetails = ({ category }) => {
             <h1>{category.node.name}</h1>
           </div>
 
-          <div className={styles.posts_container}>
-            {category?.node?.posts?.map((post, i) => (
-              <CategoryPost post={post} key={i} />
+          <div className="cards">
+            {category?.node?.posts?.map((post) => (
+              <Card post={post} key={post.id} />
             ))}
           </div>
         </div>
