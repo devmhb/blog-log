@@ -1,5 +1,5 @@
 import React from "react";
-import { FeatureCard } from "./index";
+import { FeatureCard } from "../components";
 import styles from "../styles/components/featureCards.module.scss";
 
 const FeatureCards = ({ posts }) => {

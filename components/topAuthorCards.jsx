@@ -1,5 +1,5 @@
 import React from "react";
-import { TopAuthorCard } from "./index";
+import { TopAuthorCard } from "../components";
 import styles from "../styles/components/topAuthors.module.scss";
 
 const TopAuthorCards = ({ authors }) => {

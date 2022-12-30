@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/components/blog.module.scss";
 import { useState } from "react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import { RelatedPosts } from "./index";
+import { RelatedPosts } from "../components";
 
 const BlogSingle = ({ postDetails }) => {
   // console.log(postDetails);

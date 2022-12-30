@@ -1,5 +1,5 @@
 import React from "react";
-import { Category } from "./index";
+import { Category } from "../components";
 import styles from "../styles/components/categories.module.scss";
 // import Link from "next/link";
 
