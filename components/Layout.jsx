@@ -1,6 +1,6 @@
 import React from "react";
 import { Footer } from "./index";
-import { CategoriesProvider } from "./categoriesContext";
+import { CategoriesProvider } from "../context/CategoriesContext";
 import { Navbar } from "./index";
 
 const Layout = ({ children }) => {

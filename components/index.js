@@ -3,7 +3,6 @@ export { default as AboutUs } from "./AboutUs";
 export { default as BlogSingle } from "./BlogSingle";
 export { default as Card } from "./Card";
 export { default as Categories } from "./Categories";
-export { default as CategoriesContext } from "./CategoriesContext";
 export { default as Category } from "./Category";
 export { default as FaqItem } from "./FaqItem";
 export { default as FaqItems } from "./FaqItems";

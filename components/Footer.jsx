@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import styles from "../styles/components/footer.module.scss";
 import Link from "next/link";
-import { CategoriesContext } from "./categoriesContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { CategoriesContext } from "../context/CategoriesContext";
 
 const Footer = () => {
   const categoriesInfo = useContext(CategoriesContext);
