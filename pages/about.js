@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import AboutUs from "../components/AboutUs";
+import { AboutUs } from "../components";
 import { getAuthors } from "../service";
-import AboutAuthor from "../components/AboutAuthor";
+import { AboutAuthor } from "../components";
 
 const About = ({ authors }) => {
   return (

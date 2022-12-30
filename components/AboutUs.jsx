@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/components/aboutus.module.scss";
 import Image from "next/image";
-import AboutAuthor from "./AboutAuthor";
+import { AboutAuthor } from "./index";
 import wordpress from "../images/1_jfdwtvU6V6g99q3G7gq7dQ-removebg-preview 1.png";
 import unsplash from "../images/blogger-logo-vector-download-free-11574227208kwyac33kkx-removebg-preview 1.png";
 import blogger from "../images/blogger-logo-vector-download-free-11574227208kwyac33kkx-removebg-preview 1.png";

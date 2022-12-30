@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RecentCard from "./RecentCard";
+import { RecentCard } from "./index";
 import { useEffect } from "react";
 import { getRecentPosts } from "../service";
 import styles from "../styles/components/recentCards.module.scss";

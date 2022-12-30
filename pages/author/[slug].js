@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/components/authorDetails.module.scss";
 import { getAuthor, getAuthors } from "../../service";
-import Card from "../../components/Card";
+import { Card } from "../../components";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];

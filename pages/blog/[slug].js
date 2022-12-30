@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../../styles/blog.module.scss";
-import BlogSingle from "../../components/BlogSingle";
+import { BlogSingle } from "../../components";
 import { getPostDetails, getPosts } from "../../service";
 
 const Blog = ({ post }) => {

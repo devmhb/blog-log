@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import styles from "../styles/components/blog.module.scss";
 import { useState } from "react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import RelatedPosts from "./RelatedPosts";
+import { RelatedPosts } from "./index";
 
 const BlogSingle = ({ postDetails }) => {
   // console.log(postDetails);

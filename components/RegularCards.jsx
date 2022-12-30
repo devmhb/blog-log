@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/components/regularCards.module.scss";
-import RegularCard from "./RegularCard";
+import { RegularCard } from "./index";
 
 const RegularCards = ({ posts }) => {
   return (

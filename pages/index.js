@@ -1,11 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import FeatureCards from "../components/featureCards";
-import TopAuthorCards from "../components/topAuthorCards";
-import HomeCategories from "../components/homeCategories";
+import {
+  FeatureCards,
+  TopAuthorCards,
+  HomeCategories,
+  RecentCards,
+  RegularCards,
+} from "../components";
 import { getAuthors, getCategories, getPosts } from "../service";
-import RecentCards from "../components/RecentCards";
-import RegularCards from "../components/RegularCards";
 
 export default function Home({ posts, authors, categories }) {
   // console.log(posts);

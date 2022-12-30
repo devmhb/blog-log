@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/components/faqItem.module.scss";
-import FaqItem from "./faqItem";
+import { FaqItem } from "./index";
 
 const FaqItems = () => {
   return (

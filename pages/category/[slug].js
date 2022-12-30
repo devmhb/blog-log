@@ -2,7 +2,7 @@ import React from "react";
 import { getCategories, getCategory } from "../../service";
 import styles from "../../styles/components/categoryDetail.module.scss";
 import Head from "next/head";
-import Card from "../../components/Card";
+import { Card } from "../../components";
 
 const CategoryDetails = ({ category }) => {
   const categoryInfo = category?.edges;

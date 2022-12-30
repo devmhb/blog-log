@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getRelatedPosts } from "../service";
-import RelatedCard from "./RelatedCard";
+import { RelatedCard } from "./index";
 
 const RelatedPosts = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
