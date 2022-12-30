@@ -1,16 +1,16 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <h1 align="center">biofidelicX Quiz</h1>
+  <h1 align="center">Blog Log</h1>
 
   <p align="center">
-    Here you find all kind of bio-science related quiz.
+    Here you find different kinds of blogs like food blog, technology blog, fashion blog, etc.
     <br />
     <br />
-    <a href="https://biofidelicx-quiz.vercel.app/">View Demo</a>
+    <a href="https://blog-log.netlify.app/">View Demo</a>
     ·
-    <a href="https://github.com/hrshainik/biofidelicx-quiz/issues">Report Bug</a>
+    <a href="https://github.com/devmhb/blog-log/issues">Report Bug</a>
     ·
-    <a href="https://github.com/hrshainik/biofidelicx-quiz/issues">Request Feature</a>
+    <a href="https://github.com/devmhb/blog-log/issues">Request Feature</a>
   </p>
 </div>
 
@@ -33,9 +33,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://biofidelicx-quiz.vercel.app/)
+[![Product Name Screen Shot][product-screenshot]](https://blog-log.vercel.app/)
 
-Here you find all kind of bio-science related quiz.
+Here you find different kinds of blogs like food blog, technology blog, fashion blog, etc.
 
 <p align="right"><a href="#top">⇧Back To Top</a></p>
 
@@ -44,9 +44,9 @@ Here you find all kind of bio-science related quiz.
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Tailwind CSS](https://tailwindcss.com/)
 - [Sass](https://sass-lang.com/)
-- [Firebase](https://firebase.google.com/)
+- [GraphCMS](https://hygraph.com/)
+- [GraphQL](https://graphql.org/)
 
 <p align="right"><a href="#top">⇧Back To Top</a></p>
 
@@ -71,9 +71,9 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Habibur Rahman - [@portfoilo](https://hrshainik.me) - hrsshainik@gmail.com
+Mehedi Hasan - [@portfoilo](https://devmhb.netlify.app/) - mehedibuiyan734@gmail.com
 
-Project Link: [https://github.com/hrshainik/biofidelicx-quiz](https://github.com/hrshainik/biofidelicx-quiz)
+Project Link: [https://github.com/devmhb/blog-log](https://github.com/devmhb/blog-log)
 
 <p align="right"><a href="#top">⇧Back To Top</a></p>
 
