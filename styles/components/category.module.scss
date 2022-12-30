@@ -1,7 +1,7 @@
 @import "../variables";
 .category_container {
   .category {
-    background-color: #e8f3f3;
+    background-color: #26b1aa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,7 @@
     width: 15rem;
     height: 10rem;
     border-radius: 5px;
+    color: $white;
     cursor: pointer;
     .image {
       img {

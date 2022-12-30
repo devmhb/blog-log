@@ -2,8 +2,9 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/components/navbar.module.scss";
 import { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
   const [burger, setBurger] = useState(false);
@@ -29,9 +30,9 @@ const Navbar = () => {
         <div className={styles.dropdown}>
           <li onClick={handleDropdown}>
             Pages
-            {/* <span className={styles.arrow}>
+            <span className={styles.arrow}>
               <FontAwesomeIcon icon={faArrowDown} />
-            </span> */}
+            </span>
           </li>
           {dropdown && (
             <div className={styles.dropdown_items}>
@@ -75,8 +76,13 @@ const Navbar = () => {
         </ul>
       )}
 
-      <div className={styles.burger} onClick={handleNavbar}>
-        <div></div>
+      <div
+        className={`${styles.humBurger} ${burger ? styles.cross : null} `}
+        onClick={handleNavbar}
+      >
+        <span className={styles.item}></span>
+        <span className={styles.item}></span>
+        <span className={styles.item}></span>
       </div>
       <Link href="/">
         <h1 className={styles.logo}>BLOG</h1>
