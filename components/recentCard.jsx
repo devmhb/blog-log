@@ -4,7 +4,6 @@ import React from "react";
 import styles from "../styles/components/recentCard.module.scss";
 
 const RecentCard = ({ post }) => {
-  //   console.log(post);
   return (
     <Link href={`/blog/${post?.slug}`}>
       <div className={styles.popularC}>

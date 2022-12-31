@@ -4,6 +4,13 @@ import Image from "next/image";
 import styles from "../../styles/components/authorDetails.module.scss";
 import { getAuthor, getAuthors } from "../../service";
 import { Card } from "../../components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
@@ -28,6 +35,67 @@ const AuthorDetails = ({ author }) => {
             <h1>Hi! I am {authorInfo?.node?.name}</h1>
             <p className={styles.authorsbio}>{authorInfo?.node?.bio}</p>
             <p className={styles.authorsbio}>{authorInfo?.node?.description}</p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                marginTop: "0.5rem",
+              }}
+            >
+              {authorInfo?.node?.facebook && (
+                <a
+                  href={authorInfo?.node?.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faFacebook}
+                    width="20"
+                    style={{ cursor: "pointer" }}
+                  />
+                </a>
+              )}
+              {authorInfo?.node?.instagram && (
+                <a
+                  href={authorInfo?.node?.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    width="20"
+                    style={{ cursor: "pointer" }}
+                  />
+                </a>
+              )}
+              {authorInfo?.node?.twitter && (
+                <a
+                  href={authorInfo?.node?.twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faTwitter}
+                    width="20"
+                    style={{ cursor: "pointer" }}
+                  />
+                </a>
+              )}
+              {authorInfo?.node?.linkedin && (
+                <a
+                  href={authorInfo?.node?.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    width="20"
+                    style={{ cursor: "pointer" }}
+                  />
+                </a>
+              )}
+            </div>
           </div>
         </div>
 

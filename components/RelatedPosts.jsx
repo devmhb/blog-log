@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getRelatedPosts } from "../service";
-import { RelatedCard } from "../components";
+import { RecentCard } from "../components";
 
 const RelatedPosts = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -11,7 +11,7 @@ const RelatedPosts = ({ categories, slug }) => {
   return (
     <>
       {relatedPosts.map((post) => (
-        <RelatedCard key={post.id} post={post} />
+        <RecentCard key={post.id} post={post} />
       ))}
     </>
   );

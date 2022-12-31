@@ -41,7 +41,7 @@ li {
 
 img {
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .cards {
@@ -70,4 +70,9 @@ img {
 
 ::-webkit-scrollbar-thumb {
   background-color: #00aaa1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -36,7 +36,13 @@ const FeatureCard = ({ posts }) => {
             </div>
             <div className={styles.feature_info}>
               <div className={styles.author}>
-                {/* <Image src="" width ="20" height="20" alt='author'/> */}
+                <Image
+                  src={post.node.author.photo.url}
+                  width="20"
+                  height="20"
+                  alt="author"
+                  style={{ borderRadius: "50%" }}
+                />
                 <p className={styles.author_name}>{post.node.author.name} </p>
               </div>
               <p

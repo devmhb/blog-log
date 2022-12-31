@@ -8,6 +8,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         ></link>
+        <meta name="theme-color" content="#00aaa1" />
       </Head>
       <body>
         <Main />

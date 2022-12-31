@@ -61,7 +61,7 @@ const AboutUs = ({ authors }) => {
 
       <div className={styles.about_author}>
         <h1>
-          <span>Meet </span>Our Author
+          <span>Meet</span> Our Author
         </h1>
         <div className={styles.about_author_card}>
           <div className={styles.card}>

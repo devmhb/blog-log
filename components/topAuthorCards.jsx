@@ -8,7 +8,7 @@ const TopAuthorCards = ({ authors }) => {
   return (
     <div className={styles.top_authorC_container}>
       <h5>
-        <span>Top</span>Authors
+        <span>Top</span> Authors
       </h5>
       <div className={styles.top_authorC}>
         {authorInfo?.map((author, i) => (

@@ -9,6 +9,7 @@
   .categories {
     @include btn-fill-pri(6px 8px, $tag);
     border-radius: 3px;
+    margin-top: 5px;
   }
 
   &_title {
@@ -22,7 +23,7 @@
 
     img {
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 5px;
       overflow: hidden;
     }
   }

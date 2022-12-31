@@ -11,7 +11,7 @@ const Card = ({ post }) => {
         <div className={styles.feature_img}>
           <Image src={post?.featuredImage[0]?.url} alt="img" layout="fill" />
         </div>
-        <p className={styles.categories}>Travel</p>
+        <p className={styles.categories}>{post?.categories[0]?.name}</p>
         <h1 className={styles.feature_title}>{post.title}</h1>
         <div className={styles.feature_info}>
           <div className={styles.author}>

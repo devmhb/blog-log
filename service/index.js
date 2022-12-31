@@ -55,6 +55,10 @@ export const getPostDetails = async (slug) => {
               bio
               name
               id
+              slug
+              photo {
+                url
+              }
             }
             content {
               raw
@@ -151,6 +155,10 @@ export const getAuthors = async () => {
               title
               slug
             }
+            facebook
+            instagram
+            twitter
+            linkedin
           }
         }
       }
@@ -169,6 +177,10 @@ export const getAuthor = async (slug) => {
             name
             bio
             description
+            facebook
+            instagram
+            twitter
+            linkedin
             photo {
               url
             }
@@ -238,12 +250,19 @@ export const getRelatedPosts = async (categories, slug) => {
         last: 3
       ) {
         title
-        featuredImage {
-          url
-        }
+        excerpt
         createdAt
         slug
         id
+        categories {
+          name
+        }
+        author {
+          photo {
+            url
+          }
+          name
+        }
       }
     }
   `;

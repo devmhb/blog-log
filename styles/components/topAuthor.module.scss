@@ -2,6 +2,7 @@
   display: flex;
   gap: 0.5rem;
   cursor: pointer;
+  align-items: flex-start;
 
   &_img {
     flex: 0 80px;
@@ -21,7 +22,6 @@
   .top_author_info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     justify-content: center;
     flex: 1;
   }

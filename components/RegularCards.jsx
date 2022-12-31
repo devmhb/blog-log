@@ -3,6 +3,7 @@ import styles from "../styles/components/regularCards.module.scss";
 import { RegularCard } from "../components";
 
 const RegularCards = ({ posts }) => {
+  console.log(posts);
   return (
     <div className={styles.recentC_container}>
       <h5 className="feature_month">

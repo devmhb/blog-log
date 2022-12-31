@@ -17,7 +17,6 @@ export { default as RecentCard } from "./RecentCard";
 export { default as RecentCards } from "./RecentCards";
 export { default as RegularCard } from "./RegularCard";
 export { default as RegularCards } from "./RegularCards";
-export { default as RelatedCard } from "./RelatedCard";
 export { default as RelatedPosts } from "./RelatedPosts";
 export { default as TopAuthorCard } from "./TopAuthorCard";
 export { default as TopAuthorCards } from "./TopAuthorCards";

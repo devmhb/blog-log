@@ -3,33 +3,38 @@
 
 .blog_container {
   display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-  padding-right: 2rem;
+  flex-flow: row;
+  align-items: flex-start;
+  gap: 3rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  .blog {
+    flex: 2;
+  }
   .category_name {
     width: fit-content;
     @include btn-fill-pri(6px 8px, $tag);
-    margin: 0.8rem 0rem;
   }
   .blog_title {
-    margin: 1rem 0 1rem 0;
+    margin: 0rem 0 0.7rem 0;
   }
 
   .blogC_info {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
-    .author {
-      display: flex;
-      gap: 0.5rem;
-    }
+    gap: 2rem;
   }
 
   .related_postsC {
-    padding-top: 3rem;
+    position: sticky;
+    top: 76px;
+    flex: 1;
     h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
       span {
-        @include btn-fill-pri(6px 8px, $h2);
+        @include btn-fill-pri(2px 4px, $h3);
       }
     }
   }
@@ -41,7 +46,17 @@
   height: 200px;
 }
 .post_detials {
+  position: relative;
   p {
     width: 100%;
   }
+  img {
+    width: 100%;
+  }
+}
+.author {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+  cursor: pointer;
 }
