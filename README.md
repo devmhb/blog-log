@@ -47,6 +47,7 @@ Here you find different kinds of blogs like food blog, technology blog, fashion 
 - [Sass](https://sass-lang.com/)
 - [GraphCMS](https://hygraph.com/)
 - [GraphQL](https://graphql.org/)
+- [FontAwesome](https://fontawesome.com/)
 
 <p align="right"><a href="#top">⇧Back To Top</a></p>
 
