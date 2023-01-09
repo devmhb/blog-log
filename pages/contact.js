@@ -31,7 +31,7 @@ const Contact = () => {
             Rapidiously reconceptualize visionary imperatives without
           </p>
           <p className={styles.contact_info}>
-            mehedibuiyan734@gmail.com <br />
+            devmhbbd@gmail.com <br />
             01910819923 <br />
             17/2-A Maniknagar, Dhaka-1203
           </p>
