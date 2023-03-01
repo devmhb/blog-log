@@ -14,7 +14,6 @@ import {
 
 const AuthorDetails = ({ author }) => {
   const authorInfo = author?.edges[0];
-  // console.log(authorInfo);
   return (
     <>
       <Head>
